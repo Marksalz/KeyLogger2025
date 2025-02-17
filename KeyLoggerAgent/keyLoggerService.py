@@ -33,13 +33,3 @@ class KeyLoggerService(IKeyLogger):
         except AttributeError:
             self.__buffer.add_data(str(key))
 
-
-log_testing = KeyLoggerService()
-log_testing.start_logging()
-# set a timer to stop logging after 10 seconds
-time.sleep(10)
-log_testing.stop_logging()
-print(log_testing.get_logged_keys())
-
-
-

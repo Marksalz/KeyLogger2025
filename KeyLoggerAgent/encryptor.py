@@ -1,20 +1,25 @@
 import base64
 
 class Encryptor:
-    __key = "secretkey1.1"
+
+    def __init__(self, __key = "secretkey1"):
+        self.__key = __key
+
     def encrypt(self, data: str):
-        encrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, self.__key * (len(data) // len(self.__key) + 1)))
+        encrypted = base64.b64encode(''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, self.__key * (
+                    len(data) // len(self.__key) + 1))).encode()).decode()
         return encrypted
 
     def decrypt(self, data: str):
-        encrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, self.__key * (len(data) // len(self.__key) + 1)))
-        return encrypted
+        decrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in
+                        zip(base64.b64decode(data).decode(), self.__key * (len(data) // len(self.__key) + 1)))
+        return decrypted
 
 encryptor = Encryptor()
-encrypted_data = encryptor.encrypt("328951595")
-print(encrypted_data)
-# decrypt the encrypted data
-decrypted_data = encryptor.decrypt(encrypted_data)
-print(decrypted_data)
+# encrypted_data = encryptor.encrypt("adina 328951595")
+# print(f"Encrypted data: {encrypted_data}")
+# decrypted_data = encryptor.decrypt("G0UGUglUB0UWETgAGlwWBAoGHBEHRQxSLhESSwpBEgYGUhxUBEUM")
+# print(f"Decrypted data: {decrypted_data}")
 
-#base64.b64encode(encrypted.encode()).decode()
+
+

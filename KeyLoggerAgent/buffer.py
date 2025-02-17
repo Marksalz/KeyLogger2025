@@ -5,7 +5,7 @@ class Buffer:
         self.__data = []
         self.__max_size = __max_size
 
-    def add_data(self, data):
+    def add_data(self, data: str):
         self.__data.append(data)
         if len(self.__data) > self.__max_size:
             self.__data.pop(0)
