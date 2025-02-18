@@ -24,6 +24,9 @@ class KeyLoggerService(IKeyLogger):
     def get_logged_keys(self) -> List[str]:
         return self.__buffer.get_data()
 
+    def flush(self) -> None:
+        self.__buffer.flush()
+
     def get_is_logging(self) -> bool:
         return self.__is_logging
 

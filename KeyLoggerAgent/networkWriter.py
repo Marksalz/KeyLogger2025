@@ -1,6 +1,5 @@
 import requests
 from interfaceManager import*
-from backend import*
 
 class NetworkWriter(Iwriter):
     def __init__(self, url: str):

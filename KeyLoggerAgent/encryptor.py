@@ -15,11 +15,13 @@ class Encryptor:
                         zip(base64.b64decode(data).decode(), self.__key * (len(data) // len(self.__key) + 1)))
         return decrypted
 
-encryptor = Encryptor()
+#encryptor = Encryptor()
 # encrypted_data = encryptor.encrypt("adina 328951595")
 # print(f"Encrypted data: {encrypted_data}")
-# decrypted_data = encryptor.decrypt("G0UGUglUB0UWETgAGlwWBAoGHBEHRQxSLhESSwpBEgYGUhxUBEUM")
+# decrypted_data = encryptor.decrypt("XUUAUgpUBkUyVApLEAIEFw5FSRFGRVFSU1RdRUERQEVQUldUXw==")
 # print(f"Decrypted data: {decrypted_data}")
+
+
 
 
 

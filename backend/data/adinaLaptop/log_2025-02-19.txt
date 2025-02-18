@@ -1,0 +1,12 @@
+{
+    "2025-02-19 data:": [
+        {
+            "timestamp": "2025-02-19 09:30:15",
+            "data": "F0UHUg9UD0USEQBFCAgXHloWExhRFkUCUhZUAEUSERlFEFIOVABFEhEYRQhSAVQORRMRAEUIUg9UGEUTERhF"
+        },
+        {
+            "timestamp": "2025-02-19 10:15:42",
+            "data": "AEUIUg9UD0UKERlFB1IOVBhFExEXRRBSD1QPRRMRF0UQUg9UD0UTERlFEFIOVAFFHREYRRBSD1QARRMRAEU="
+        }
+    ]
+}

