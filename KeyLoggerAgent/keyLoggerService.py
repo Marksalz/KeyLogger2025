@@ -1,5 +1,3 @@
-import time
-
 from interfaceManager import *
 from buffer import *
 from typing import List
