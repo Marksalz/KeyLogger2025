@@ -85,5 +85,6 @@ def get_target_machine_key_strokes():
 def decrypt_data():
 
     return jsonify({"status": "success"}), 200
+
 if __name__ == '__main__':
  app.run(debug=True)

