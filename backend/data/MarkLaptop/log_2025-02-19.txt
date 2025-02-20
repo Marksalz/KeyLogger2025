@@ -1,0 +1,32 @@
+{
+    "2025-02-19 data:": [
+        {
+            "timestamp": "2025-02-19 14:40:04",
+            "data": "SlxRS1xCXi4cSF0WExMGEVtQQQRBVFBLVU0gAAAfABUCEQBHWQ=="
+        },
+        {
+            "timestamp": "2025-02-19 14:40:14",
+            "data": "S1xWQ1BNXi4cSF0WExMGEQYAF1AQDQYfFhUHHw=="
+        },
+        {
+            "timestamp": "2025-02-19 14:40:24",
+            "data": "EQARFVRHIAAAHwANChQRNAwIGFgfSwACLhESSxtQEA4QAgQXDgoUehYcTQENHQ0RWBBSREJT"
+        },
+        {
+            "timestamp": "2025-02-19 14:40:54",
+            "data": "GwAPHgo/DhxXQgMEABcRGyAAAB8AFQIRAAAEEA=="
+        },
+        {
+            "timestamp": "2025-02-19 16:30:28",
+            "data": "GwALFwEcDw8dehYcTQEVFQgAHVoSDgIZARAgAAAfABUCEQAQAwERWxcNBxgBHAoOGFsX"
+        },
+        {
+            "timestamp": "2025-02-19 16:30:38",
+            "data": "GQE="
+        },
+        {
+            "timestamp": "2025-02-19 16:30:48",
+            "data": "GwAPHgo/DhxXQgMEABcSGxkJHXoWHE0BFRUIAA=="
+        }
+    ]
+}
