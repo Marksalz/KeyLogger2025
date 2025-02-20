@@ -42,7 +42,7 @@ def upload():
             }
             file_data[time.strftime("%Y-%m-%d") + " data:"].append(new_entry)
             f.seek(0)
-            f.write(json.dumps(file_data, indent=4, sort_keys=False) + "\n")
+            f.write(json.dumps(file_data, ensure_ascii=False, indent=4, sort_keys=False) + "\n")
     else:
         with open(file_path, "w", encoding="utf-8") as f:
             json_data = {
@@ -53,7 +53,7 @@ def upload():
                     }
                 ]
             }
-            f.write(json.dumps(json_data, indent=4, sort_keys=False) + "\n")
+            f.write(json.dumps(json_data, ensure_ascii=False, indent=4, sort_keys=False) + "\n")
 
     return jsonify({"status": "success", "file": file_path, "data": log_data_decrypted}), 200
 

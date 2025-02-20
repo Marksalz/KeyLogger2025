@@ -1,18 +1,14 @@
-import base64
-
 class Encryptor:
 
     def __init__(self, __key = "secretkey1"):
         self.__key = __key
 
     def encrypt(self, data: str):
-        encrypted = base64.b64encode(''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, self.__key * (
-                    len(data) // len(self.__key) + 1))).encode()).decode()
+        encrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, self.__key * (len(data) // len(self.__key) + 1)))
         return encrypted
 
     def decrypt(self, data: str):
-        decrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in
-                        zip(base64.b64decode(data).decode(), self.__key * (len(data) // len(self.__key) + 1)))
+        decrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, self.__key * (len(data) // len(self.__key) + 1)))
         return decrypted
 
 #encryptor = Encryptor()
