@@ -18,5 +18,5 @@ class IKeyLogger(ABC):
 class Iwriter(ABC):
 
     @abstractmethod
-    def send_data(self, data: str, machine_name: str) -> None:
+    def send_data(self, data: str, machine_name: str|dict) -> None:
         pass

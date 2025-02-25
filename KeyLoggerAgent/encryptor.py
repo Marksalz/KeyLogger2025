@@ -4,12 +4,12 @@ class Encryptor:
         self.__key = __key
 
     def encrypt(self, data: str):
-        encrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, self.__key * (len(data) // len(self.__key) + 1)))
+        encrypted = ''.join(
+            chr((ord(c) ^ ord(k))) for c, k in zip(data, self.__key * (len(data) // len(self.__key) + 1)))
         return encrypted
 
     def decrypt(self, data: str):
-        decrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, self.__key * (len(data) // len(self.__key) + 1)))
-        return decrypted
+        return self.encrypt(data)
 
 #encryptor = Encryptor()
 # encrypted_data = encryptor.encrypt("adina 328951595")
