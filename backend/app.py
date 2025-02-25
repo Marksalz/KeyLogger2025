@@ -3,6 +3,8 @@ from datetime import datetime
 from flask import Flask, jsonify, request, json
 from flask_cors import CORS
 import time
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from KeyLoggerAgent import encryptor
 
 DATA_FOLDER = os.path.join(os.path.dirname(__file__), "data")
