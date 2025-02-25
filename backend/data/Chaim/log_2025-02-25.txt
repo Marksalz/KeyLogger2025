@@ -22,5 +22,33 @@
     {
         "data": "Key.alt_lKey.tabKey.alt_lKey.tabKey.alt_lKey.tab",
         "timestamp": "2025-02-25 14:50:58"
+    },
+    {
+        "data": "\n",
+        "timestamp": "2025-02-25 14:52:58"
+    },
+    {
+        "data": "Key.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_l\t\bKey.ctrl_l\t",
+        "timestamp": "2025-02-25 14:53:08"
+    },
+    {
+        "data": "Key.shiftKey.shiftKey.shiftKey.shiftKey.shift@Key.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftKey.shiftWOE\br\b\b\b\b\bKey.shift",
+        "timestamp": "2025-02-25 14:53:18"
+    },
+    {
+        "data": "WORH\b\b\b\b\bKey.shiftW\b\b\bKey.shift@Key.downKey.downKey.downKey.downKey.downKey.downKey.downKey.downKey.esc\b",
+        "timestamp": "2025-02-25 14:53:28"
+    },
+    {
+        "data": ",jpaKey.ctrl_l\u0001Key.shiftKey.alt_l,jpa t, fk vxprhu, ana,naho cpruhh\bhey",
+        "timestamp": "2025-02-25 14:53:38"
+    },
+    {
+        "data": "Key.ctrl_l\u001a",
+        "timestamp": "2025-02-25 14:53:58"
+    },
+    {
+        "data": "Key.ctrl_l\u0003Key.ctrl_l\u0016Key.ctrl_l\u0013",
+        "timestamp": "2025-02-25 14:54:08"
     }
 ]

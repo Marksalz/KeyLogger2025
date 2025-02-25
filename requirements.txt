@@ -3,3 +3,4 @@ Flask-CORS
 pynput
 getmac
 requests
+python-dotenv
