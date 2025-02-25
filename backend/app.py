@@ -3,6 +3,7 @@ from datetime import datetime
 from flask import Flask, jsonify, request, json
 from flask_cors import CORS
 import time
+from dotenv import load_dotenv
 
 
 
@@ -24,6 +25,8 @@ def upload():
         return jsonify({"error": "Invalid payload"}), 400
 
     machine = data["machine"]
+    load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))  # Load environment variables from .env file
+    key = os.getenv("KEY_ENCRYPTION")
     log_data_decrypted = decrypt("secretkey1", data["data"])
     print(f"Decrypted data: {log_data_decrypted}")
 

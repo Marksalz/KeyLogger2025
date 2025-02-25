@@ -1,7 +1,11 @@
+import os
+from dotenv import load_dotenv
+
 class Encryptor:
 
-    def __init__(self, __key = "secretkey1"):
-        self.__key = __key
+    def __init__(self, __key=None):
+        load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))  # Load environment variables from .env file
+        self.__key = __key or os.getenv("KEY_ENCRYPTION")
 
     def encrypt(self, data: str):
         encrypted = ''.join(
@@ -11,10 +15,11 @@ class Encryptor:
     def decrypt(self, data: str):
         return self.encrypt(data)
 
-#encryptor = Encryptor()
+# Example usage:
+# encryptor = Encryptor()
 # encrypted_data = encryptor.encrypt("adina 328951595")
 # print(f"Encrypted data: {encrypted_data}")
-# decrypted_data = encryptor.decrypt("XUUAUgpUBkUyVApLEAIEFw5FSRFGRVFSU1RdRUERQEVQUldUXw==")
+# decrypted_data = encryptor.decrypt(encrypted_data)
 # print(f"Decrypted data: {decrypted_data}")
 
 
