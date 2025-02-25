@@ -13,6 +13,8 @@ The backend server is built using Flask and provides several API endpoints to in
   - `encryptor.py`: Provides encryption and decryption for the logged data.
   - `fileWriter.py`: Writes logged data to a file.
   - `networkWriter.py`: Sends logged data to the backend server.
+  - `buffer.py`: Implements a buffer for storing logged data.
+  - `interfaceManager.py`: Manages the user interface for the keylogger.
 - `frontend/`: Contains the frontend application.
   - `index.html`: Main page to display the list of machines.
   - `login.html`: Login page to access the keylogger data.
