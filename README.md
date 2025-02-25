@@ -19,6 +19,8 @@ The backend server is built using Flask and provides several API endpoints to in
   - `index.html`: Main page to display the list of machines.
   - `login.html`: Login page to access the keylogger data.
   - `machine.html`: Page to display logs for a specific machine.
+  - `style.css`: CSS file for styling the frontend.
+  - `index.js`: JavaScript file for handling frontend logic.
 - `.gitignore`: Specifies files and directories to be ignored by Git.
 
 ## Requirements
