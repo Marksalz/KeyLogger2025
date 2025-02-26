@@ -2,63 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="login.js" defer></script>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            background-image: url("images.jpg");
-        }
-
-        .login-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .login-container h1 {
-            margin-bottom: 20px;
-        }
-
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .login-container button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .login-container button     :hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Machine Logs</title>
+    <link rel="stylesheet" href="machine.css">
+    <script src="machine.js" defer></script>
 </head>
 <body>
-<div class="login-container">
-    <h1>Login</h1>
-    <form id="loginForm">
-        <label for="password">
-        </label><input type="password" id="password" placeholder="Enter Password" required>
-        <button type="submit">Login</button>
-    </form>
+<h1>Machine Logs</h1>
+<div>
+    <h2>Logs for <span id="machineName"></span></h2>
+    <label for="startDate" style="display: inline-block; margin-right: 10px;">Start Date:</label>
+    <input type="date" id="startDate" style="width: 150px; display: inline-block; margin-right: 10px;">
+    <label for="endDate" style="display: inline-block; margin-right: 10px;">End Date:</label>
+    <input type="date" id="endDate" style="width: 150px; display: inline-block;">
+    <button id="filterButton">Filter</button>
+    <button id="clearButton">Clear</button>
+    <button id="downloadButton">Download</button>
+    <label for="searchTerm" style="display: inline-block; margin-left: 10px;">Search:</label>
+    <input type="text" id="searchTerm" placeholder="Enter search term" style="width: 150px; display: inline-block; margin-left: 10px;">
+    <pre id="keystrokesOutput"></pre>
 </div>
 </body>
 </html>
