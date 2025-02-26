@@ -21,6 +21,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
             window.location.href = 'index.html';
         } else {
             alert('Wrong password!');
+            document.getElementById('password').value = '';
         }
     });
 });

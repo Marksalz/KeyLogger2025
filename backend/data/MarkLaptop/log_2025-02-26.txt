@@ -50,5 +50,21 @@
     {
         "data": "hello \t to \t you",
         "timestamp": "2025-02-26 11:44:45"
+    },
+    {
+        "data": "menachemsalzberg13 [SHIFT] @gm",
+        "timestamp": "2025-02-26 14:03:21"
+    },
+    {
+        "data": "ail.com  [SHIFT] I want  [BACKSPACE]  [BACKSPACE]  to sat he",
+        "timestamp": "2025-02-26 14:03:31"
+    },
+    {
+        "data": "llo [UP]  [UP]  [DOWN]  [DOWN]  [LEFT]  [RIGHT]  [LEFT]  [UP]  [DOWN]  [LEFT]  [DOWN] ncbv gftryhf Key.alt_l [SHIFT] f",
+        "timestamp": "2025-02-26 14:03:41"
+    },
+    {
+        "data": "fd hdbvne because now  [SHIFT] I want to go",
+        "timestamp": "2025-02-26 14:03:51"
     }
 ]

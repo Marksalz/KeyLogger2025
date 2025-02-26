@@ -1,0 +1,14 @@
+[
+    {
+        "data": "sample data entry one",
+        "timestamp": "2025-02-25 12:00:00"
+    },
+    {
+        "data": "sample data entry two",
+        "timestamp": "2025-02-25 12:05:00"
+    },
+    {
+        "data": "sample data entry three",
+        "timestamp": "2025-02-25 12:10:00"
+    }
+]

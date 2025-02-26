@@ -76,6 +76,7 @@ function updateClock() {
 }
 
 function loadHostagesTicker() {
+    console.log('Loading hostages ticker...');
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "https://bringthemhomenow.net/1.1.0/hostages-ticker.js";
@@ -87,4 +88,7 @@ function loadHostagesTicker() {
     document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-document.addEventListener("DOMContentLoaded", loadHostagesTicker);
+document.addEventListener("DOMContentLoaded", function () {
+    console.log('DOM fully loaded and parsed');
+    loadHostagesTicker();
+});
