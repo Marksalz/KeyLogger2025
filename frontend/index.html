@@ -2,16 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Key Logger Agent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Logger Management Interface</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
+    <style>
+        .navbar-custom {
+            background-color: #343a40;
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+            color: #ffffff;
+        }
+        .clock {
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-    <h1>Key Logger Agent</h1>
-    <div>
-        <h2>Machines: </h2>
-        <button id="refreshButton">Refresh</button>
-        <ul id="machinesList"></ul>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">Key Logger Management</a>
+        <div class="ml-auto">
+            <span class="clock" id="clock"></span>
+            <button class="btn btn-outline-light ml-2" id="profileButton">Profile</button>
+            <button class="btn btn-outline-light ml-2" id="logoutButton">Logout</button>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Key Logger Management Interface</h1>
+        <div class="text-center mb-4">
+            <button id="refreshButton" class="btn btn-primary">Refresh</button>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Machine Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="machinesList">
+                    
+                </tbody>
+            </table>
+        </div>
     </div>
+
+    <div id="bthn" lang="he"></div>
 </body>
 </html>
