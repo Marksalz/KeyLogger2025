@@ -1,35 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--
-    The head section of the HTML document.
-    Sets the character encoding, title, links to the stylesheet, and includes the JavaScript file.
-    -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Logs</title>
+    <!-- External Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom Stylesheets and Scripts -->
     <link rel="stylesheet" href="machine.css">
     <script src="machine.js" defer></script>
 </head>
 <body>
-<h1>Machine Logs</h1>
-<div>
-    <h2>Logs for <span id="machineName"></span></h2>
-    <!--
-    Form elements for filtering logs by start and end date.
-    Includes labels and input fields for start and end dates, and buttons for filtering, clearing, and downloading logs.
-    -->
-    <label for="startDate" style="display: inline-block; margin-right: 10px;">Start Date:</label>
-    <input type="date" id="startDate" style="width: 150px; display: inline-block; margin-right: 10px;">
-    <label for="endDate" style="display: inline-block; margin-right: 10px;">End Date:</label>
-    <input type="date" id="endDate" style="width: 150px; display: inline-block;">
-    <button id="filterButton">Filter</button>
-    <button id="clearButton">Clear</button>
-    <button id="downloadButton">Download</button>
-    <br>
-    <label for="searchTerm" style="display: inline-block; margin-right: 10px;">Search:</label>
-    <input type="text" id="searchTerm" placeholder="Enter search term"
-           style="width: 150px; display: inline-block; margin-right: 10px;">
+<!-- Navigation Bar Component -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fs-3" href="index.html">
+            <i class="fas fa-shield-alt me-2"></i>KeyLogger Management
+        </a>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="dashboard-header text-center">
+    <div class="container">
+        <h1 class="display">Logs for <span id="machineName"></span></h1>
+    </div>
+</header>
+
+<!-- Control Panel Section -->
+<div class="container">
+    <div class="control-panel">
+        <!-- Date Range and Search Filters -->
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="startDate" class="form-label col-form-label">Start Date:</label>
+                <input type="date" id="startDate" class="form-control">
+            </div>
+            <div class="col-auto">
+                <label for="endDate" class="form-label col-form-label">End Date:</label>
+                <input type="date" id="endDate" class="form-control">
+            </div>
+            <div class="col-auto">
+                <label for="searchTerm" class="form-label col-form-label">Search:</label>
+                <input type="text" id="searchTerm" class="form-control" placeholder="Enter search term">
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="col-auto mt-4">
+            <button id="filterButton" class="btn btn-primary">
+                <i class="fas fa-filter me-2"></i>Filter
+            </button>
+            <button id="clearButton" class="btn btn-secondary">
+                <i class="fas fa-times me-2"></i>Clear
+            </button>
+            <button id="downloadButton" class="btn btn-success">
+                <i class="fas fa-download me-2"></i>Download
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Log Display Area -->
+<div class="cyber-table">
     <pre id="keystrokesOutput"></pre>
 </div>
+
+<!-- Footer Component -->
+<footer class="footer text-center">
+    <div class="container">
+        <p class="mb-0">© 2025 KeyLogger Management System. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JavaScript Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
