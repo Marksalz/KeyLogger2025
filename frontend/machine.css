@@ -30,7 +30,6 @@ h1 {
     margin-bottom: 1rem;
     font-size: 2.5rem;
     background: linear-gradient(90deg, #0d6efd, #6610f2);
-    -webkit-text-fill-color: transparent;
     padding: 20px;
 }
 
@@ -89,25 +88,34 @@ table {
     border-collapse: separate;
     border-spacing: 0;
     margin-top: 20px;
-    background-color: #16202d;
+    background-color: #202d3f;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(254, 83, 83, 0.1);
+    table-layout: fixed; /* קובע רוחב קבוע לכל עמודה */
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #2c3e50;
+    border-right: 1px solid #2c3e50;
+    border-left: 1px solid #2c3e50;
+    color: #e9ecef;
+    text-align: left;
+    word-wrap: break-word; /* שבירת מילים */
+    white-space: normal; /* אפשרות לרדת שורה */
+    overflow-wrap: break-word; /* שבירה במקרה הצורך */
 }
 
 th {
     background: linear-gradient(90deg, #0d6efd, #6610f2);
     color: white;
-    padding: 12px;
     font-weight: 600;
-    text-align: left;
-    border-bottom: 2px solid #2c3e50;
+    border-bottom: 2px solid #ffffff;
 }
 
 td {
-    padding: 12px;
-    border-bottom: 1px solid #2c3e50;
-    color: #e9ecef;
+    max-width: 300px; /* מגביל את רוחב התא */
 }
 
 tr:hover {
@@ -117,6 +125,7 @@ tr:hover {
 tr:last-child td {
     border-bottom: none;
 }
+
 
 #keystrokesOutput {
     margin-top: 20px;

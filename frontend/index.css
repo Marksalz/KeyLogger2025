@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f1218;
+    background-color:   #0f141d;
     color: #e9ecef;
     padding-top: 72px; /* Add padding to account for fixed navbar */
 }
@@ -147,4 +147,33 @@ body {
     background-color: #16202d;
     padding: 1.5rem 0;
     margin-top: 3rem;
+}
+
+
+.sortable {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.sortable i {
+    font-size: 0.8em;
+    margin-left: 5px;
+    color: #ffffff;
+}
+
+.sortable.asc i {
+    color: #ffffff;
+}
+
+.sortable.desc i {
+    color: #ffffff;
+}
+
+.sortable.asc i::before {
+    content: "\f0de"; /* fa-sort-up */
+}
+
+.sortable.desc i::before {
+    content: "\f0dd"; /* fa-sort-down */
 }

