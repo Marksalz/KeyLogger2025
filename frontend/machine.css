@@ -1,12 +1,24 @@
+/*
+ * Styles for the body element.
+ * Sets the font family and margin.
+ */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
+/*
+ * Styles for h1 and h2 elements.
+ * Sets the text color.
+ */
 h1, h2 {
     color: #333;
 }
 
+/*
+ * Styles for list items in the machines list.
+ * Sets display, padding, margin, background color, text color, border, cursor, border radius, and text alignment.
+ */
 ul#machinesList li {
     display: inline-block;
     padding: 10px 15px;
@@ -19,6 +31,10 @@ ul#machinesList li {
     text-align: center;
 }
 
+/*
+ * Styles for list items in the machines list when hovered.
+ * Adds a tooltip with a message.
+ */
 ul#machinesList li:hover::after {
     content: "Click to view machine logs";
     position: absolute;
@@ -29,21 +45,10 @@ ul#machinesList li:hover::after {
     white-space: nowrap;
 }
 
-form {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-}
-
+/*
+ * Styles for button elements.
+ * Sets margin, padding, background color, text color, border, and cursor.
+ */
 button {
     margin-top: 10px;
     padding: 10px 15px;
@@ -53,32 +58,56 @@ button {
     cursor: pointer;
 }
 
+/*
+ * Styles for button elements when hovered.
+ * Changes the background color.
+ */
 button:hover {
     background-color: #0056b3;
 }
 
+/*
+ * Styles for pre elements.
+ * Sets background color, padding, and border.
+ */
 pre {
     background-color: #f4f4f4;
     padding: 10px;
     border: 1px solid #ddd;
 }
 
+/*
+ * Styles for table elements.
+ * Sets width, border collapse, and margin.
+ */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
+/*
+ * Styles for th and td elements.
+ * Sets padding, border, and text alignment.
+ */
 th, td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
 }
 
+/*
+ * Styles for th elements.
+ * Sets background color.
+ */
 th {
     background-color: #f4f4f4;
 }
 
+/*
+ * Styles for even table rows.
+ * Sets background color.
+ */
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
