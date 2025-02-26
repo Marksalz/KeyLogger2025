@@ -1,5 +1,4 @@
-
-root {
+:root {
     --primary-color: #0d6efd;
     --dark-color: #212529;
     --secondary-color: #6c757d;
@@ -11,12 +10,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0f1218;
     color: #e9ecef;
+    padding-top: 72px; /* Add padding to account for fixed navbar */
 }
 
 .navbar {
     background: linear-gradient(135deg, #001f3f, #0a4171);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     padding: 0.8rem 1rem;
+    position: fixed; /* Make navbar fixed */
+    top: 0; /* Position at top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 .navbar-brand {
@@ -51,7 +55,6 @@ body {
     position: relative;
     z-index: 1;
     background: linear-gradient(90deg, #0d6efd, #6610f2);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -98,9 +101,6 @@ body {
     transition: all 0.2s;
 }
 
-.cyber-table tbody tr:hover {
-    background-color: rgba(13, 110, 253, 0.1);
-}
 
 .status-badge {
     padding: 0.4rem 0.8rem;
@@ -127,31 +127,21 @@ body {
     display: inline-block;
 }
 
- :root {
-            --success-color: #28a745;
-        }
+.pulse-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--success-color);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
 
-        .pulse-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: var(--success-color);
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.3;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
 
 .footer {
     background-color: #16202d;
