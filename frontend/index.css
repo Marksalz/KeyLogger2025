@@ -1,77 +1,160 @@
-/*
- * Styles for the body element.
- * Sets the font family and margin.
- */
+
+root {
+    --primary-color: #0d6efd;
+    --dark-color: #212529;
+    --secondary-color: #6c757d;
+    --success-color: #20c997;
+    --danger-color: #dc3545;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f1218;
+    color: #e9ecef;
 }
 
-/*
- * Styles for h1 and h2 elements.
- * Sets the text color.
- */
-h1, h2 {
-    color: #333;
+.navbar {
+    background: linear-gradient(135deg, #001f3f, #0a4171);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 1rem;
 }
 
-/*
- * Styles for list items in the machines list.
- * Sets display, padding, margin, background color, text color, border, cursor, border radius, and text alignment.
- */
-ul#machinesList li {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 5px;
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
 }
 
-/*
- * Styles for list items in the machines list when hovered.
- * Adds a tooltip with a message.
- */
-ul#machinesList li:hover::after {
-    content: "Click to view machine logs";
+.dashboard-header {
+    background-color: #16202d;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-header::before {
+    content: "";
     position: absolute;
-    background-color: #333;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0));
+    z-index: 0;
+}
+
+.dashboard-header h1 {
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stats-card {
+    background-color: #16202d;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.stats-card .icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cyber-table {
+    background-color: #16202d;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.cyber-table .table {
+    margin-bottom: 0;
+    color: #e9ecef;
+}
+
+.cyber-table thead {
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
     color: white;
-    padding: 5px;
-    border-radius: 3px;
-    white-space: nowrap;
 }
 
-/*
- * Styles for button elements.
- * Sets margin, padding, background color, text color, border, and cursor.
- */
-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
+.cyber-table tbody tr {
+    border-bottom: 1px solid #2c3e50;
+    transition: all 0.2s;
 }
 
-/*
- * Styles for button elements when hovered.
- * Changes the background color.
- */
-button:hover {
-    background-color: #0056b3;
+.cyber-table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.1);
 }
 
-/*
- * Styles for pre elements.
- * Sets background color, padding, and border.
- */
-pre {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
+.status-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.btn-cyber {
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s;
+}
+
+.btn-cyber:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clock-wrapper {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+ :root {
+            --success-color: #28a745;
+        }
+
+        .pulse-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: var(--success-color);
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+.footer {
+    background-color: #16202d;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
 }
