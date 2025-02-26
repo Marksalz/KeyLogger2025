@@ -174,3 +174,4 @@ function filterKeystrokesBySearchTerm(keystrokes, searchTerm) {
     if (!Array.isArray(keystrokes)) return [];
     return keystrokes.filter(entry => entry.data.toLowerCase().includes(searchTerm));
 }
+

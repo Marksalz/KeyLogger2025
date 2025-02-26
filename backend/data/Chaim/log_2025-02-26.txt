@@ -526,5 +526,365 @@
     {
         "data": "Key.ctrl_l \t Key.ctrl_l \t  \t ",
         "timestamp": "2025-02-26 17:08:58"
+    },
+    {
+        "data": "Key.ctrl_l\u0001 [BACKSPACE] ",
+        "timestamp": "2025-02-26 17:09:38"
+    },
+    {
+        "data": "עשת [BACKSPACE] יתי  [SHIFT] PUSH תבשוק אצלך את ה",
+        "timestamp": "2025-02-26 17:10:08"
+    },
+    {
+        "data": "רוייקט \n Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:10:19"
+    },
+    {
+        "data": "Key.ctrl_l",
+        "timestamp": "2025-02-26 17:27:38"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:27:49"
+    },
+    {
+        "data": "Key.alt_l \t כנראה זה בעיה ",
+        "timestamp": "2025-02-26 17:27:59"
+    },
+    {
+        "data": "מוקמיתף  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] ת \n השעון אצלך עובד מצויין [SHIFT] ? \n ",
+        "timestamp": "2025-02-26 17:28:09"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:28:20"
+    },
+    {
+        "data": "jsdhjcjh jesfnbuhKey.alt_l \t Key.alt_l \t  \t ",
+        "timestamp": "2025-02-26 17:32:15"
+    },
+    {
+        "data": "Key.alt_l",
+        "timestamp": "2025-02-26 17:32:35"
+    },
+    {
+        "data": " \t zv guca Key.ctrl_l\u0001 [SHIFT] Key.alt_lzv gucs tmkh nmuhhi \n ,kns t, verht, ",
+        "timestamp": "2025-02-26 17:32:45"
+    },
+    {
+        "data": "PI vjsav agah,h c  [SHIFT] APP fsh [BACKSPACE]  [BACKSPACE]  [BACKSPACE] fsh k",
+        "timestamp": "2025-02-26 17:32:55"
+    },
+    {
+        "data": "eck b,ubho \n Key.alt_l \t Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:33:05"
+    },
+    {
+        "data": ",rdo \n Key.ctrl_l\u0016",
+        "timestamp": "2025-02-26 17:34:05"
+    },
+    {
+        "data": "Key.ctrl_lKey.ctrl_l\u0003 \t \u0016Key.alt_l \t Key.alt_l \t  \t ",
+        "timestamp": "2025-02-26 17:34:15"
+    },
+    {
+        "data": "Key.alt_l",
+        "timestamp": "2025-02-26 17:34:25"
+    },
+    {
+        "data": "Key.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_l \t ",
+        "timestamp": "2025-02-26 17:34:35"
+    },
+    {
+        "data": "Key.ctrl_l",
+        "timestamp": "2025-02-26 17:35:05"
+    },
+    {
+        "data": " [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] Q [BACKSPACE]  [BACKSPACE]  [SHIFT] @ce [BACKSPACE] pruhhey vzv ,csu [BACKSPACE]  [BACKSPACE] ",
+        "timestamp": "2025-02-26 17:35:15"
+    },
+    {
+        "data": "srhl tu, cgcrh, thpv Key.ctrl_l\u0001 [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] @",
+        "timestamp": "2025-02-26 17:35:25"
+    },
+    {
+        "data": " [DOWN]  [DOWN]  [DOWN]  [DOWN]  [UP]  \n  [SHIFT]  \n  \n cpruhhey vzv ,srhl tu,h thpv  [BACKSPACE] ",
+        "timestamp": "2025-02-26 17:35:35"
+    },
+    {
+        "data": " [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  thl tbh hfuk ka",
+        "timestamp": "2025-02-26 17:35:45"
+    },
+    {
+        "data": "u, erht,  [SHIFT] API fsh keck nhsg nvnjac t, fkv",
+        "timestamp": "2025-02-26 17:35:55"
+    },
+    {
+        "data": " [BACKSPACE]  vnhsg atpar keck f,uc,  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  jun",
+        "timestamp": "2025-02-26 17:36:05"
+    },
+    {
+        "data": "rv ,ufbv  [SHIFT] IP nv [BACKSPACE] vfk vfk fk vnhsg aha utpar kck nv",
+        "timestamp": "2025-02-26 17:36:15"
+    },
+    {
+        "data": "njac thpv tb  [BACKSPACE] h hfuk kvuxhl [BACKSPACE] ; t, zv \n Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:36:25"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t Key.alt_l \t  \t Key.ctrl_l [SHIFT]  \t ",
+        "timestamp": "2025-02-26 17:36:35"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t  \t ",
+        "timestamp": "2025-02-26 17:36:55"
+    },
+    {
+        "data": "mdfndf",
+        "timestamp": "2025-02-26 17:37:05"
+    },
+    {
+        "data": "Key.ctrl_l [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] nv vcghv knv zv kt gucsKey.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:37:15"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t  \t ",
+        "timestamp": "2025-02-26 17:37:26"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t  \t sdhbsdcbsdhsdcgjhgKey.alt_l \t ",
+        "timestamp": "2025-02-26 17:37:36"
+    },
+    {
+        "data": "Key.alt_l \t  \t ",
+        "timestamp": "2025-02-26 17:37:46"
+    },
+    {
+        "data": "fi \n Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:38:06"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t Key.alt_l \t  \t  \t  [CAPSLOCK] ",
+        "timestamp": "2025-02-26 17:38:17"
+    },
+    {
+        "data": " [SHIFT]  [CAPSLOCK] Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:38:27"
+    },
+    {
+        "data": "ky  [BACKSPACE]  [BACKSPACE] t vcb,h' ,xchr kh cgcrh, \n \\",
+        "timestamp": "2025-02-26 17:38:37"
+    },
+    {
+        "data": " [BACKSPACE]  [BACKSPACE]  \n  \n  [BACKSPACE]  [BACKSPACE] ",
+        "timestamp": "2025-02-26 17:38:47"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:39:17"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:39:28"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t  \t fi",
+        "timestamp": "2025-02-26 17:39:39"
+    },
+    {
+        "data": "  [BACKSPACE]  knv kt \n ,rtv tck t, verhtv k  [SHIFT] APP [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] ",
+        "timestamp": "2025-02-26 17:39:49"
+    },
+    {
+        "data": " [BACKSPACE]  [BACKSPACE] Key.ctrl_l\u0001nv t,v runt  [BACKSPACE]  [BACKSPACE] r ",
+        "timestamp": "2025-02-26 17:39:59"
+    },
+    {
+        "data": "Key.ctrl_l\u0001nv t,v run [BACKSPACE]  [BACKSPACE] t [BACKSPACE]  [BACKSPACE] tunr fsth kvuxh; erhtv ",
+        "timestamp": "2025-02-26 17:40:09"
+    },
+    {
+        "data": "keck t, fk vnhsg ak vnjac fukk junrv ,fuu [BACKSPACE] cu, ufuw ukv",
+        "timestamp": "2025-02-26 17:40:19"
+    },
+    {
+        "data": "c [BACKSPACE]  [BACKSPACE]  [BACKSPACE] hvhv fp,ur ahrtu t, fk vnhsg gk vnjac ak vjunrv",
+        "timestamp": "2025-02-26 17:40:29"
+    },
+    {
+        "data": " tu kt fsth ks [BACKSPACE] dg,  [SHIFT]  [BACKSPACE]  czv [SHIFT] ? \n ",
+        "timestamp": "2025-02-26 17:40:39"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:40:49"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t Key.alt_l \t Key.alt_l \t  \n ",
+        "timestamp": "2025-02-26 17:40:59"
+    },
+    {
+        "data": "Key.alt_l \t tukh kt",
+        "timestamp": "2025-02-26 17:41:09"
+    },
+    {
+        "data": " fsth k [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] brtv Key.ctrl_l\u0001gt [BACKSPACE]  [BACKSPACE]  [BACKSPACE] t h [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] ",
+        "timestamp": "2025-02-26 17:41:19"
+    },
+    {
+        "data": " [BACKSPACE] c  [SHIFT] ACTION hvhv pryho  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] fp,ur",
+        "timestamp": "2025-02-26 17:41:29"
+    },
+    {
+        "data": " go jkubh, m; \n Key.alt_l \t Key.alt_l \t  \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:41:39"
+    },
+    {
+        "data": "Key.alt_l \t  \t brtv Key.ctrl_l\u0001tbh hjacu [BACKSPACE]  [BACKSPACE] uc to fsth k",
+        "timestamp": "2025-02-26 17:41:49"
+    },
+    {
+        "data": "au, ahbuhho srxy [BACKSPACE] Key.ctrl_l\u0001tukh kt fsth kdgm  [BACKSPACE]  [BACKSPACE] , ",
+        "timestamp": "2025-02-26 17:41:59"
+    },
+    {
+        "data": "c  [BACKSPACE] ar, nhs",
+        "timestamp": "2025-02-26 17:42:10"
+    },
+    {
+        "data": "rcv \n ",
+        "timestamp": "2025-02-26 18:28:53"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 19:33:43"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 19:34:13"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t  \t ",
+        "timestamp": "2025-02-26 19:34:33"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 19:34:43"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 19:35:03"
+    },
+    {
+        "data": "acy - ,apc [BACKSPACE]  [SHIFT] \"v \n  [BACKSPACE] ",
+        "timestamp": "2025-02-26 19:36:13"
+    },
+    {
+        "data": "Key.ctrl_l\u0001",
+        "timestamp": "2025-02-26 19:36:34"
+    },
+    {
+        "data": "nayrv - aj [SHIFT] \"o",
+        "timestamp": "2025-02-26 19:37:44"
+    },
+    {
+        "data": "Key.alt_l \t neun [UP]  [UP]  \n ",
+        "timestamp": "2025-02-26 19:37:54"
+    },
+    {
+        "data": " [SHIFT] Key.alt_lshKey.ctrl_l\u0001shKey.alt_l \t ",
+        "timestamp": "2025-02-26 19:38:04"
+    },
+    {
+        "data": "Key.alt_l \t Key.ctrl_l",
+        "timestamp": "2025-02-26 19:38:14"
+    },
+    {
+        "data": "Key.ctrl_l\u0003Key.alt_l \t ",
+        "timestamp": "2025-02-26 19:38:44"
+    },
+    {
+        "data": "Key.alt_l \t  \t Key.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_l\u0016Key.ctrl_lKey.ctrl_l\u001aKey.ctrl_l\u001a",
+        "timestamp": "2025-02-26 19:38:54"
+    },
+    {
+        "data": " [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] ' ugus",
+        "timestamp": "2025-02-26 19:39:04"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t tzur hru",
+        "timestamp": "2025-02-26 19:39:14"
+    },
+    {
+        "data": "khoKey.ctrl_l\u0013Key.alt_l \t ",
+        "timestamp": "2025-02-26 19:39:24"
+    },
+    {
+        "data": "Key.alt_l \t  \t Key.ctrl_l\u0003Key.alt_l \t Key.alt_l \t  \t ",
+        "timestamp": "2025-02-26 19:39:35"
+    },
+    {
+        "data": "Key.ctrl_l\u0016Key.ctrl_lKey.ctrl_l\u001aKey.ctrl_l\u0016",
+        "timestamp": "2025-02-26 19:39:45"
+    },
+    {
+        "data": "hjh [DOWN]  [DOWN]  [UP]  [UP]  [UP]  \n Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 19:40:45"
+    },
+    {
+        "data": "atku,",
+        "timestamp": "2025-02-26 19:40:55"
+    },
+    {
+        "data": "atku,  [BACKSPACE]  \n ",
+        "timestamp": "2025-02-26 19:41:05"
+    },
+    {
+        "data": " [DELETE]  [LEFT]  [RIGHT] ,trhl \t ao vautv \t atkv \t buar \n Key.alt_l \t ",
+        "timestamp": "2025-02-26 19:41:15"
+    },
+    {
+        "data": "Key.alt_l \t buat \n  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [UP]  [DOWN]  [UP]  [LEFT] ao vautk [DOWN]  [RIGHT]  [DOWN]  [LEFT]  [LEFT]  [LEFT]  [UP] ",
+        "timestamp": "2025-02-26 19:41:25"
+    },
+    {
+        "data": "tn [SHIFT] \"i [RIGHT] vto ha thpv kv,eso ctn [SHIFT] \"",
+        "timestamp": "2025-02-26 19:41:35"
+    },
+    {
+        "data": "i' vcht sudnt avut kuns thnui thah [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] ",
+        "timestamp": "2025-02-26 19:41:45"
+    },
+    {
+        "data": " [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  \n  [RIGHT]  [UP] bp,kh crbayhhi \n  [RIGHT]  [UP] 26q06q202",
+        "timestamp": "2025-02-26 19:41:55"
+    },
+    {
+        "data": "5 \n  [UP] Key.ctrl_l\u0016Key.ctrl_l\u0018\u001a\u0003 [DOWN] Key.ctrl_l\u0016 [LEFT] jhho tar zkmni [LEFT] ",
+        "timestamp": "2025-02-26 19:42:05"
+    },
+    {
+        "data": " [LEFT] cbhhv [RIGHT] nv humtho tjrh vnxkuk' to",
+        "timestamp": "2025-02-26 19:42:15"
+    },
+    {
+        "data": "thzv ,gusv ufuw [SHIFT] ? \n ",
+        "timestamp": "2025-02-26 19:42:25"
+    },
+    {
+        "data": "zv kt nabv' ,a [SHIFT] ",
+        "timestamp": "2025-02-26 19:42:35"
+    },
+    {
+        "data": " [BACKSPACE] n [SHIFT] \"a  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] ana [BACKSPACE]  [SHIFT] \"a zv kto  [SHIFT] _ [BACKSPACE]  [SHIFT] + hks [SHIFT]  \n y [BACKSPACE] tp ",
+        "timestamp": "2025-02-26 19:42:45"
+    },
+    {
+        "data": " [BACKSPACE]  [BACKSPACE] o ngbhhhi tu,l kknus kgune ha pv nxnl go vrcv pryho' ",
+        "timestamp": "2025-02-26 19:42:55"
+    },
+    {
+        "data": " [SHIFT] )vnxproh  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] ho vo kt fk fl ngusfbho [SHIFT] (",
+        "timestamp": "2025-02-26 19:43:05"
     }
 ]
