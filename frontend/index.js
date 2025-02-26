@@ -82,9 +82,9 @@ function loadHostagesTicker() {
     script.setAttribute(
         "integrity",
         "sha384-DHuakkmS4DXvIW79Ttuqjvl95NepBRwfVGx6bmqBJVVwqsosq8hROrydHItKdsne"
-    );
+      );
     script.setAttribute("crossorigin", "anonymous");
-    document.head.appendChild(script);
+    document.getElementsByTagName("head")[0].appendChild(script);
 }
 
 document.addEventListener("DOMContentLoaded", loadHostagesTicker);
