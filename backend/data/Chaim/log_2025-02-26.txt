@@ -1,0 +1,530 @@
+[
+    {
+        "data": "כגיעקרכיעקרכקרכקרכקרכרקכקרכ קרכקכרכקררכקכקרכה ",
+        "timestamp": "2025-02-26 16:05:20"
+    },
+    {
+        "data": " [CMD] ",
+        "timestamp": "2025-02-26 16:06:40"
+    },
+    {
+        "data": "גכיעיחיעקריכעחערקכעירקעכחיקערכיעקרחכע",
+        "timestamp": "2025-02-26 16:07:10"
+    },
+    {
+        "data": "יחעקרכעחקירעכיחרקכעחיעקכיקריחכעחריקעכחקריעכעיעכקחירעכחיעקרכקרכקרכיייחעקכ",
+        "timestamp": "2025-02-26 16:07:20"
+    },
+    {
+        "data": "קרכקרכרקיחנקרחיכנויקנכויויויקכוערכקרכנהחיגנכהחירהקכיננרקכנוהנהקרכוטקכה",
+        "timestamp": "2025-02-26 16:07:30"
+    },
+    {
+        "data": "קרוכהוקרכטעבנקורככרקכרכרקכרכקכגכההגנהב",
+        "timestamp": "2025-02-26 16:07:40"
+    },
+    {
+        "data": "דגדגבדגבגדבגכהגכקר",
+        "timestamp": "2025-02-26 16:07:50"
+    },
+    {
+        "data": "גקגבקרכבק",
+        "timestamp": "2025-02-26 16:08:00"
+    },
+    {
+        "data": "קרכבקרברקכרקכברקכברקקבקרכקרכרקבכקבכרררררררבקרכדגבקרכבגדקכרק",
+        "timestamp": "2025-02-26 16:08:10"
+    },
+    {
+        "data": "כככגכהרקכגכדגכגדכבקקרכק'גברקכדגכקכ",
+        "timestamp": "2025-02-26 16:08:20"
+    },
+    {
+        "data": "קרכבקרכקרכקרכרקכבררקככרקכהקרכהקרכרכהרקכהקרכ",
+        "timestamp": "2025-02-26 16:08:30"
+    },
+    {
+        "data": "קרכקרכרקככקרכ",
+        "timestamp": "2025-02-26 16:09:00"
+    },
+    {
+        "data": "רקכקרכרקכרכקקרכקרכקרכרקכקרכקרככקרכקרכ",
+        "timestamp": "2025-02-26 16:09:10"
+    },
+    {
+        "data": "קרכרקכקרכ",
+        "timestamp": "2025-02-26 16:09:20"
+    },
+    {
+        "data": "קרכקרכקרכקרכקרכקרכקרנדגהכנהקרכנ",
+        "timestamp": "2025-02-26 16:09:30"
+    },
+    {
+        "data": "זדגנהקרכנהב גדגדנכה בנקרכנהדגמנהקכעהעקכה נמדג ה נכמגיקערכ ז ג  ה",
+        "timestamp": "2025-02-26 16:09:40"
+    },
+    {
+        "data": "  מנד   ההה  ננגנננגננדייהיחיחהיהחכיהיהחהיחיהחיהחיהחיהחיהחייהחיהחיההיחה",
+        "timestamp": "2025-02-26 16:09:50"
+    },
+    {
+        "data": "יחהכקיחהיחקהרכחיההקרכקרכרקכקרכרקכקרררקכרקמרכקכקרקרכררכקקר",
+        "timestamp": "2025-02-26 16:10:00"
+    },
+    {
+        "data": "כגבדגבחיקכחלהחחיעיייעעעלעלע",
+        "timestamp": "2025-02-26 16:10:10"
+    },
+    {
+        "data": "תכKey.ctrl_l\u0001",
+        "timestamp": "2025-02-26 16:10:30"
+    },
+    {
+        "data": "Key.ctrl_l\u001a",
+        "timestamp": "2025-02-26 16:12:00"
+    },
+    {
+        "data": "Key.ctrl_l\u0013Key.ctrl_l\u0001למה הוא מ",
+        "timestamp": "2025-02-26 16:12:10"
+    },
+    {
+        "data": "רענן כל זהמןKey.ctrl_l\u0001איך מרעננים כל הזמ  [BACKSPACE] ן ",
+        "timestamp": "2025-02-26 16:12:20"
+    },
+    {
+        "data": "Key.ctrl_l\u0001למה אם יש עדכון הוא מרענן את ד",
+        "timestamp": "2025-02-26 16:12:40"
+    },
+    {
+        "data": " [BACKSPACE]  [SHIFT] FRON [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] T ואיך זה קורה כי זה לא כל כך טוב",
+        "timestamp": "2025-02-26 16:12:50"
+    },
+    {
+        "data": " \n ",
+        "timestamp": "2025-02-26 16:13:00"
+    },
+    {
+        "data": "אבל עכשיו על כל עדכון",
+        "timestamp": "2025-02-26 16:15:31"
+    },
+    {
+        "data": " לשרת אם המשתמש ה",
+        "timestamp": "2025-02-26 16:15:41"
+    },
+    {
+        "data": "קליד אז כל הדף מתרענן, למב",
+        "timestamp": "2025-02-26 16:15:51"
+    },
+    {
+        "data": " [SHIFT] ? [SHIFT]  \n  [SHIFT] @ \n ",
+        "timestamp": "2025-02-26 16:16:01"
+    },
+    {
+        "data": " י ש [BACKSPACE]  [BACKSPACE] שי לי בעיה ",
+        "timestamp": "2025-02-26 16:18:21"
+    },
+    {
+        "data": "בקוד שלי כמה דברים. [SHIFT]  \n דבר ראשון ",
+        "timestamp": "2025-02-26 16:18:31"
+    },
+    {
+        "data": "השעונים בדף  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] ",
+        "timestamp": "2025-02-26 16:19:11"
+    },
+    {
+        "data": " [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] INDEXץ [BACKSPACE] . [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] HTML ",
+        "timestamp": "2025-02-26 16:19:21"
+    },
+    {
+        "data": "מתר [BACKSPACE]  [BACKSPACE] לא עובדים כאילו הווא לא מתעדכן. [SHIFT]  \n ",
+        "timestamp": "2025-02-26 16:19:31"
+    },
+    {
+        "data": "וכן אם יש ",
+        "timestamp": "2025-02-26 16:19:41"
+    },
+    {
+        "data": "עדכון בהקשות אז הוא ר [BACKSPACE] מרענן את כל הדפים",
+        "timestamp": "2025-02-26 16:19:51"
+    },
+    {
+        "data": " ב  [SHIFT] FRONT, מדוע [SHIFT] ? \n ",
+        "timestamp": "2025-02-26 16:20:01"
+    },
+    {
+        "data": " [SHIFT]  [SHIFT] @ [SHIFT]  \n תבדוק ",
+        "timestamp": "2025-02-26 16:21:01"
+    },
+    {
+        "data": "את כל הפרווי [BACKSPACE]  [BACKSPACE] ",
+        "timestamp": "2025-02-26 16:21:11"
+    },
+    {
+        "data": "ייקט למב לא עובד השעונים בדף ולמה הוא מתקענן ",
+        "timestamp": "2025-02-26 16:21:21"
+    },
+    {
+        "data": "אם יש עדכון מהשרת \n ",
+        "timestamp": "2025-02-26 16:21:31"
+    },
+    {
+        "data": "אז ",
+        "timestamp": "2025-02-26 16:22:01"
+    },
+    {
+        "data": " [BACKSPACE] ",
+        "timestamp": "2025-02-26 16:22:11"
+    },
+    {
+        "data": " [SHIFT] @",
+        "timestamp": "2025-02-26 16:23:01"
+    },
+    {
+        "data": "אני לא מבין למה השעון שיש ",
+        "timestamp": "2025-02-26 16:23:11"
+    },
+    {
+        "data": "ב  [SHIFT] INDEX לא עובד הוא לא מתקדם תעדכן את הקוד ב  [SHIFT]  [SHIFT]  [SHIFT] I",
+        "timestamp": "2025-02-26 16:23:21"
+    },
+    {
+        "data": "NDEXץ [BACKSPACE] . [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] JS שכן יעבוד \n ",
+        "timestamp": "2025-02-26 16:23:31"
+    },
+    {
+        "data": "Key.ctrl_l\u0001\u0016",
+        "timestamp": "2025-02-26 16:24:21"
+    },
+    {
+        "data": "Key.ctrl_l\u001aKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_l\u0001\u0016\u0013",
+        "timestamp": "2025-02-26 16:24:31"
+    },
+    {
+        "data": " [SHIFT] @ [SHIFT]  \n ",
+        "timestamp": "2025-02-26 16:24:51"
+    },
+    {
+        "data": "Key.ctrl_l\u001aKey.ctrl_l\u0013",
+        "timestamp": "2025-02-26 16:25:01"
+    },
+    {
+        "data": "א",
+        "timestamp": "2025-02-26 16:25:11"
+    },
+    {
+        "data": "ני לא רענון של המידע רק אם אני אלחץ פיזית על ",
+        "timestamp": "2025-02-26 16:25:21"
+    },
+    {
+        "data": "רענון \n ",
+        "timestamp": "2025-02-26 16:25:31"
+    },
+    {
+        "data": " [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [LEFT] ",
+        "timestamp": "2025-02-26 16:26:41"
+    },
+    {
+        "data": " [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [LEFT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT]  [RIGHT] ",
+        "timestamp": "2025-02-26 16:26:51"
+    },
+    {
+        "data": "מפות כיכ [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  \n ",
+        "timestamp": "2025-02-26 16:27:41"
+    },
+    {
+        "data": " [CMD] זך",
+        "timestamp": "2025-02-26 16:28:21"
+    },
+    {
+        "data": "בית כנ",
+        "timestamp": "2025-02-26 16:30:01"
+    },
+    {
+        "data": "סת קרלין מודיעין עילית \n \\",
+        "timestamp": "2025-02-26 16:30:11"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 16:35:01"
+    },
+    {
+        "data": "אז מה מרענן אותו ",
+        "timestamp": "2025-02-26 16:35:11"
+    },
+    {
+        "data": " [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] @ [SHIFT] WKey.ctrl_l\u0001 [SHIFT] @WO",
+        "timestamp": "2025-02-26 16:35:41"
+    },
+    {
+        "data": "R [SHIFT]  \n ב  [SHIFT] FRON",
+        "timestamp": "2025-02-26 16:35:51"
+    },
+    {
+        "data": "T אם יש עדכונים מהשרת הוא מעדכן את כל הדף אני לא רוצה שיתעדכן בכ",
+        "timestamp": "2025-02-26 16:36:01"
+    },
+    {
+        "data": "לל רק כשאני לוחץ על הכפתור רענן",
+        "timestamp": "2025-02-26 16:36:11"
+    },
+    {
+        "data": " שנמצא בדף  [SHIFT] INDEX ולזה אני מתייחס תבדוק לי את כל הפק",
+        "timestamp": "2025-02-26 16:36:21"
+    },
+    {
+        "data": "וייט מה הבעיה \n ",
+        "timestamp": "2025-02-26 16:36:31"
+    },
+    {
+        "data": "לא הבנתי תסבי לי בעברית \n ",
+        "timestamp": "2025-02-26 16:37:41"
+    },
+    {
+        "data": "אז",
+        "timestamp": "2025-02-26 16:38:31"
+    },
+    {
+        "data": " תת [BACKSPACE]  [BACKSPACE] תכתוב לי מחדש ר [BACKSPACE] את כל הקובץ  [SHIFT]  [SHIFT]  [SHIFT] ",
+        "timestamp": "2025-02-26 16:38:41"
+    },
+    {
+        "data": " [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT]  [SHIFT] JS עם העדכון \n ",
+        "timestamp": "2025-02-26 16:38:51"
+    },
+    {
+        "data": "Key.ctrl_l\u0001\u0016Key.ctrl_l\u0001\u0016\u0013",
+        "timestamp": "2025-02-26 16:39:31"
+    },
+    {
+        "data": "Key.ctrl_l\u001aKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_l",
+        "timestamp": "2025-02-26 16:39:41"
+    },
+    {
+        "data": "Key.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_l\u001a\u0013",
+        "timestamp": "2025-02-26 16:39:51"
+    },
+    {
+        "data": "Key.ctrl_l\u0001\u0016\u001a",
+        "timestamp": "2025-02-26 16:40:01"
+    },
+    {
+        "data": "לא כתבת לי שוב את כל הקובץ התקין",
+        "timestamp": "2025-02-26 16:40:31"
+    },
+    {
+        "data": " שיתרענן בפעם הראשונה ואחר כך ",
+        "timestamp": "2025-02-26 16:40:41"
+    },
+    {
+        "data": " [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] טעינה של הדף ואחר כן רק כשאני מקליד [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE] ",
+        "timestamp": "2025-02-26 16:40:51"
+    },
+    {
+        "data": "לוחץ על רענון \n ",
+        "timestamp": "2025-02-26 16:41:01"
+    },
+    {
+        "data": "Key.ctrl_l\u0001\u0016Key.ctrl_l\u001aKey.ctrl_l\u0001\u0016\u0013",
+        "timestamp": "2025-02-26 16:41:51"
+    },
+    {
+        "data": "Key.ctrl_l\u001aKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_l\u0013Key.ctrl_l\u0001",
+        "timestamp": "2025-02-26 16:42:01"
+    },
+    {
+        "data": "\u0003Key.alt_l \t Key.alt_l \t  \t  [SHIFT] Key.alt_lבי \n Key.ctrl_l\u0016",
+        "timestamp": "2025-02-26 16:42:12"
+    },
+    {
+        "data": "Key.ctrl_l\u001a",
+        "timestamp": "2025-02-26 16:42:22"
+    },
+    {
+        "data": "Key.ctrl_l\u0016\u001a",
+        "timestamp": "2025-02-26 16:42:52"
+    },
+    {
+        "data": "מה הבעיהKey.ctrl_l\u0001 [SHIFT] Key.alt_lנ [BACKSPACE]  [BACKSPACE]  [BACKSPACE] מה הבעיה בקוד שהוא מעדכן את הנתונים ןן",
+        "timestamp": "2025-02-26 16:43:02"
+    },
+    {
+        "data": " [BACKSPACE] ומרענן את הדף ש [BACKSPACE] כשיש עדכונים מהשרת, זה לא אמור לקרות איפה ה",
+        "timestamp": "2025-02-26 16:43:12"
+    },
+    {
+        "data": "בעיה [SHIFT]  \n  \n  \n Key.ctrl_l\u0016 \n ",
+        "timestamp": "2025-02-26 16:43:22"
+    },
+    {
+        "data": "אני לא רוצה השוואה אני רוצה שיהיה עדכון ק [BACKSPACE] רק כש",
+        "timestamp": "2025-02-26 16:43:52"
+    },
+    {
+        "data": "אני לוחץ על הכפתור רענון המיוחד שיש ב  [SHIFT] HTML אני מצר",
+        "timestamp": "2025-02-26 16:44:02"
+    },
+    {
+        "data": "ף גם את ה [SHIFT] HTML",
+        "timestamp": "2025-02-26 16:44:12"
+    },
+    {
+        "data": " [CMD] ג [CMD] ג",
+        "timestamp": "2025-02-26 16:44:42"
+    },
+    {
+        "data": " \n ",
+        "timestamp": "2025-02-26 16:46:22"
+    },
+    {
+        "data": "Key.ctrl_l\u0003Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 16:48:22"
+    },
+    {
+        "data": "מה נשמע הכל בסדר אני רוצה לדכת מה הבע",
+        "timestamp": "2025-02-26 16:48:42"
+    },
+    {
+        "data": "יות",
+        "timestamp": "2025-02-26 16:48:52"
+    },
+    {
+        "data": "Key.ctrl_l\u0001",
+        "timestamp": "2025-02-26 16:49:02"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 16:49:12"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t  \t ",
+        "timestamp": "2025-02-26 16:49:32"
+    },
+    {
+        "data": "Key.ctrl_l\u0001Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 16:49:42"
+    },
+    {
+        "data": "דגבגקרכקרכקרכהכרהכענעאנאעהרהעערהאעהארעהרחעהירוהירןוהירןועיראעיהראעיןהמראעןויהראע",
+        "timestamp": "2025-02-26 16:51:59"
+    },
+    {
+        "data": "מהראעראעןהירעימהראחעראעאראעיראעארעראעראעראעראע",
+        "timestamp": "2025-02-26 16:52:09"
+    },
+    {
+        "data": "חלחמלחמלכחמלרחמכראצמעארעמצמצרמראלעממללרהעלחראלחראעמחראמראממאר",
+        "timestamp": "2025-02-26 16:52:19"
+    },
+    {
+        "data": "אח ",
+        "timestamp": "2025-02-26 16:54:09"
+    },
+    {
+        "data": "שלי \n ",
+        "timestamp": "2025-02-26 16:54:19"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 16:54:29"
+    },
+    {
+        "data": "Key.ctrl_l\u0001\u0016Key.ctrl_l\u0013",
+        "timestamp": "2025-02-26 16:54:39"
+    },
+    {
+        "data": "Key.ctrl_l\u0001\u0016",
+        "timestamp": "2025-02-26 16:54:49"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t  \t ",
+        "timestamp": "2025-02-26 16:54:59"
+    },
+    {
+        "data": "Key.ctrl_l\u0003Key.alt_l \t Key.alt_l \t  \t Key.ctrl_l\u0001\u0016Key.ctrl_l\u0013",
+        "timestamp": "2025-02-26 16:55:09"
+    },
+    {
+        "data": "Key.ctrl_l\u001a\u001aKey.ctrl_l\u001aKey.ctrl_lKey.ctrl_lKey.ctrl_l\u0013",
+        "timestamp": "2025-02-26 16:55:19"
+    },
+    {
+        "data": "Key.ctrl_l\u0001 [BACKSPACE] Key.ctrl_l\u0001\u0003",
+        "timestamp": "2025-02-26 16:55:39"
+    },
+    {
+        "data": "Key.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_l",
+        "timestamp": "2025-02-26 16:57:15"
+    },
+    {
+        "data": "Key.ctrl_l\u0001 [SHIFT] @",
+        "timestamp": "2025-02-26 16:57:35"
+    },
+    {
+        "data": " [SHIFT] Key.alt_lאני רוצה שתסרוק  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [BACKSPACE]  [SHIFT] Key.alt_lאני רוצה ש",
+        "timestamp": "2025-02-26 16:57:45"
+    },
+    {
+        "data": "תסרוק את כל הקוד שלי ותבדוק מדוע א",
+        "timestamp": "2025-02-26 16:57:55"
+    },
+    {
+        "data": "ם יש קריאה ל",
+        "timestamp": "2025-02-26 16:58:05"
+    },
+    {
+        "data": "Key.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_lKey.ctrl_l",
+        "timestamp": "2025-02-26 16:58:15"
+    },
+    {
+        "data": "אני חייב ",
+        "timestamp": "2025-02-26 16:59:15"
+    },
+    {
+        "data": "Key.alt_l \t ",
+        "timestamp": "2025-02-26 16:59:25"
+    },
+    {
+        "data": "Key.alt_l \t Key.ctrl_l \t ",
+        "timestamp": "2025-02-26 16:59:45"
+    },
+    {
+        "data": " ",
+        "timestamp": "2025-02-26 16:59:55"
+    },
+    {
+        "data": "Key.ctrl_l\u0003",
+        "timestamp": "2025-02-26 17:00:05"
+    },
+    {
+        "data": "Key.alt_lKey.alt_l \t Key.alt_l \t Key.ctrl_l \t ",
+        "timestamp": "2025-02-26 17:00:15"
+    },
+    {
+        "data": "Key.ctrl_l\u0016 [SHIFT]  \n  \n ",
+        "timestamp": "2025-02-26 17:00:55"
+    },
+    {
+        "data": "הוא מעדכן את הדפים",
+        "timestamp": "2025-02-26 17:01:35"
+    },
+    {
+        "data": " ב  [SHIFT] FRONT",
+        "timestamp": "2025-02-26 17:01:55"
+    },
+    {
+        "data": " [SHIFT]  \n ",
+        "timestamp": "2025-02-26 17:02:05"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_l \t ",
+        "timestamp": "2025-02-26 17:02:15"
+    },
+    {
+        "data": "Key.alt_l \t Key.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_lKey.alt_l",
+        "timestamp": "2025-02-26 17:02:25"
+    },
+    {
+        "data": "Key.ctrl_l \t Key.ctrl_l \t  \t ",
+        "timestamp": "2025-02-26 17:08:58"
+    }
+]

