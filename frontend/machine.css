@@ -1,113 +1,143 @@
-/*
- * Styles for the body element.
- * Sets the font family and margin.
- */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f1218;
+    color: #e9ecef;
+    margin: 0;
+    padding: 20px;
 }
 
-/*
- * Styles for h1 and h2 elements.
- * Sets the text color.
- */
-h1, h2 {
-    color: #333;
+h1, h2, p {
+    color: #e9ecef;
 }
 
-/*
- * Styles for list items in the machines list.
- * Sets display, padding, margin, background color, text color, border, cursor, border radius, and text alignment.
- */
-ul#machinesList li {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 5px;
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
+p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    opacity: 0.95;
+    letter-spacing: 0.02em;
 }
 
-/*
- * Styles for list items in the machines list when hovered.
- * Adds a tooltip with a message.
- */
-ul#machinesList li:hover::after {
-    content: "Click to view machine logs";
-    position: absolute;
-    background-color: #333;
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
-    white-space: nowrap;
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #8b9299;
+    text-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
 }
 
-/*
- * Styles for button elements.
- * Sets margin, padding, background color, text color, border, and cursor.
- */
+h1 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px;
+}
+
+.control-panel {
+    background-color: #16202d;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid #0d6efd;
+}
+
+input[type="date"], input[type="text"] {
+    background-color: #1a2634;
+    border: 1px solid #2c3e50;
+    color: #e9ecef;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+input[type="date"]:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+}
+
 button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s;
+    margin-right: 10px;
+    margin-top: 0;
+    background: linear-gradient(135deg, #0d6efd, #0a4171);
 }
 
-/*
- * Styles for button elements when hovered.
- * Changes the background color.
- */
 button:hover {
-    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #0a4171, #0d6efd);
 }
 
-/*
- * Styles for pre elements.
- * Sets background color, padding, and border.
- */
 pre {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
+    background-color: #16202d;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #2c3e50;
+    color: #e9ecef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: auto;
 }
 
-/*
- * Styles for table elements.
- * Sets width, border collapse, and margin.
- */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: #16202d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 2px solid #2c3e50;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #2c3e50;
+    color: #e9ecef;
+}
+
+tr:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+#keystrokesOutput {
     margin-top: 20px;
 }
 
-/*
- * Styles for th and td elements.
- * Sets padding, border, and text alignment.
- */
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
 
-/*
- * Styles for th elements.
- * Sets background color.
- */
-th {
-    background-color: #f4f4f4;
+::-webkit-scrollbar-track {
+    background: #16202d;
 }
 
-/*
- * Styles for even table rows.
- * Sets background color.
- */
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+::-webkit-scrollbar-thumb {
+    background: #2c3e50;
+    border-radius: 4px;
 }
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0d6efd;
+}
+
