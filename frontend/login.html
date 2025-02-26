@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+    The head section of the HTML document.
+    Sets the character encoding, title, links to the stylesheet, and includes the JavaScript file.
+    -->
     <meta charset="UTF-8">
-    <title>Machine Logs</title>
-    <link rel="stylesheet" href="machine.css">
-    <script src="machine.js" defer></script>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
 </head>
 <body>
-<h1>Machine Logs</h1>
-<div>
-    <h2>Logs for <span id="machineName"></span></h2>
-    <label for="startDate" style="display: inline-block; margin-right: 10px;">Start Date:</label>
-    <input type="date" id="startDate" style="width: 150px; display: inline-block; margin-right: 10px;">
-    <label for="endDate" style="display: inline-block; margin-right: 10px;">End Date:</label>
-    <input type="date" id="endDate" style="width: 150px; display: inline-block;">
-    <button id="filterButton">Filter</button>
-    <button id="clearButton">Clear</button>
-    <button id="downloadButton">Download</button>
-    <label for="searchTerm" style="display: inline-block; margin-left: 10px;">Search:</label>
-    <input type="text" id="searchTerm" placeholder="Enter search term" style="width: 150px; display: inline-block; margin-left: 10px;">
-    <pre id="keystrokesOutput"></pre>
+<div class="login-container">
+    <!--
+    The main container for the login form.
+    Contains a heading and a form with a password input and a submit button.
+    -->
+    <h1>Login</h1>
+    <form id="loginForm">
+        <!--
+        The password input field.
+        Users must enter their password here.
+        The 'required' attribute ensures that the field cannot be left empty.
+        -->
+        <label for="password">
+        </label><input type="password" id="password" placeholder="Enter Password" required>
+        <!--
+        The submit button for the login form.
+        When clicked, the form will be submitted.
+        -->
+        <button type="submit">Login</button>
+    </form>
 </div>
 </body>
 </html>
