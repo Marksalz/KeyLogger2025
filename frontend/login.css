@@ -1,0 +1,70 @@
+/*
+ * Styles for the body element.
+ * Centers the content both vertically and horizontally.
+ * Sets the background color and font family.
+ * Adds a background image.
+ */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background-image: url("images.jpg");
+}
+
+/*
+ * Styles for the login container.
+ * Sets the background color, padding, border radius, and box shadow.
+ * Centers the text.
+ */
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/*
+ * Styles for the h1 element inside the login container.
+ * Adds a margin to the bottom.
+ */
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+/*
+ * Styles for the password input field inside the login container.
+ * Sets the width, padding, margin, border, border radius, and box-sizing.
+ */
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*
+ * Styles for the button inside the login container.
+ * Sets the padding, border, border radius, background color, text color, and cursor.
+ */
+.login-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*
+ * Styles for the button inside the login container when hovered.
+ * Changes the background color.
+ */
+.login-container button:hover {
+    background-color: #0056b3;
+}
