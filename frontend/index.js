@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const button = document.getElementById('refreshButton');
         button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Refreshing...';
         button.disabled = true;
-        
+
         updateDashboard().finally(() => {
             setTimeout(() => {
                 button.innerHTML = '<i class="fas fa-sync-alt me-2"></i>Refresh';
@@ -42,7 +42,7 @@ function updateDashboard() {
     return getMachinesDetails().then(machines => {
         // Update statistics
         updateStatistics(machines);
-        
+
         // Update machines table
         updateMachinesTable(machines);
     }).catch(error => {
@@ -53,14 +53,14 @@ function updateDashboard() {
 function updateStatistics(machines) {
     let totalKeystrokes = 0;
     let activeMachines = 0;
-    
+
     machines.forEach(machine => {
         totalKeystrokes += machine.total_keystrokes;
         if (machine.is_active) {
             activeMachines++;
         }
     });
-    
+
     document.getElementById('machineCount').textContent = machines.length;
     document.getElementById('activeMachinesCount').textContent = activeMachines;
     document.getElementById('totalKeystrokes').textContent = totalKeystrokes.toLocaleString();
@@ -69,24 +69,24 @@ function updateStatistics(machines) {
 function updateMachinesTable(machines) {
     const machinesList = document.getElementById('machinesList');
     machinesList.innerHTML = '';
-    
+
     if (machines.length === 0) {
         const emptyRow = document.createElement('tr');
         emptyRow.innerHTML = '<td colspan="5" class="text-center py-4">No machines found</td>';
         machinesList.appendChild(emptyRow);
         return;
     }
-    
+
     machines.forEach(machine => {
         const row = document.createElement('tr');
-        
-        const lastActivity = machine.last_activity ? 
+
+        const lastActivity = machine.last_activity ?
             formatDateTime(machine.last_activity) : 'Never';
-        
-        const status = machine.is_active ? 
-            '<span class="status-badge bg-success">Active</span>' : 
+
+        const status = machine.is_active ?
+            '<span class="status-badge bg-success">Active</span>' :
             '<span class="status-badge bg-secondary">Inactive</span>';
-        
+
         row.innerHTML = `
             <td>${machine.name}</td>
             <td>${status}</td>
@@ -98,13 +98,13 @@ function updateMachinesTable(machines) {
                 </button>
             </td>
         `;
-        
+
         machinesList.appendChild(row);
     });
-    
+
     // Add event listeners to view logs buttons
     document.querySelectorAll('.view-logs-btn').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const machine = this.getAttribute('data-machine');
             window.open(`machine.html?machine=${machine}`, '_blank');
         });
@@ -132,7 +132,7 @@ function getMachinesDetails() {
 function formatDateTime(dateTimeStr) {
     const date = new Date(dateTimeStr);
     const today = new Date();
-    
+
     // Check if the date is today
     if (date.toDateString() === today.toDateString()) {
         return 'Today ' + date.toLocaleTimeString();
