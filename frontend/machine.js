@@ -1,10 +1,11 @@
-// Event listener for the machine page
+
+
 document.addEventListener('DOMContentLoaded', function () {
-    /**
-     * Extracts the target machine from the URL parameters and sets the machine name in the DOM.
-     * Displays a loading message while fetching keystrokes.
-     * Adds event listeners for filtering, clearing, and downloading keystrokes.
-     */
+
+    if (localStorage.getItem('isLoggedIn') !== 'true') {
+        window.location.href = 'login.html';
+    }
+    
     const urlParams = new URLSearchParams(window.location.search);
     const targetMachine = urlParams.get('machine');
     document.getElementById('machineName').textContent = targetMachine;
